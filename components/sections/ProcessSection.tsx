@@ -106,7 +106,7 @@ export default function ProcessSection({ data }: SectionProps.WorkingProcess) {
           </div>
 
           {/* Middle Step: (02) Planning Text */}
-          <div className="mt-20 sm:mt-28 w-full max-w-[320px] flex flex-col items-start pl-2">
+          <div className="mt-8 sm:mt-12 w-full max-w-[320px] flex flex-col items-start pl-2">
             <div className="flex items-center gap-3 mb-2">
               <span className="w-8 sm:w-10 h-[1.5px] bg-[#B38749] inline-block"></span>
               <span className="font-serif-luxury italic text-[#B38749] text-[20px] sm:text-[22px] tracking-wide">

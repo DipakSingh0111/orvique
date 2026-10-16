@@ -71,9 +71,7 @@ export default function Navbar({ data }: SectionProps.Header) {
           </div>
         </Link>
 
-        {/* Right Navigation: Hamburger Menu + Enquire Now Button */}
         <div className="flex items-center gap-4 sm:gap-6" ref={menuRef}>
-          {/* Minimalist Hamburger Menu Button */}
           <div className="relative">
             <button
               type="button"
@@ -106,7 +104,6 @@ export default function Navbar({ data }: SectionProps.Header) {
               />
             </button>
 
-            {/* Dropdown Menu Tabs Container */}
             <div
               className={`absolute right-0 top-[calc(100%+12px)] w-[260px] sm:w-[290px] bg-white rounded-[16px] shadow-[0_16px_40px_rgba(10,34,57,0.12)] border border-[#EDE5D8] overflow-hidden transition-all duration-300 origin-top-right z-50 ${
                 isOpen
@@ -114,7 +111,6 @@ export default function Navbar({ data }: SectionProps.Header) {
                   : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
               }`}
             >
-              {/* Dropdown Header Accent */}
               <div className="px-5 pt-4 pb-2.5 border-b border-[#F4EFE6] flex items-center justify-between">
                 <span className="text-[11px] uppercase tracking-[0.22em] font-medium text-[#A67C4A]">
                   Navigation Menu
@@ -122,7 +118,6 @@ export default function Navbar({ data }: SectionProps.Header) {
                 <span className="w-2 h-2 rounded-full bg-[#B38749]/60" />
               </div>
 
-              {/* Navigation Tabs List */}
               <nav className="p-2.5 flex flex-col gap-1">
                 {menuLinks.map((tab) => {
                   const isActive = currentPath === tab.href;
@@ -162,7 +157,6 @@ export default function Navbar({ data }: SectionProps.Header) {
                 })}
               </nav>
 
-              {/* Bottom CTA within Dropdown on mobile/tablet */}
               <div className="p-3 bg-[#FAF7F2]/60 border-t border-[#F4EFE6] sm:hidden">
                 <Link
                   href={enquireHref}
@@ -176,7 +170,6 @@ export default function Navbar({ data }: SectionProps.Header) {
             </div>
           </div>
 
-          {/* Enquire Now CTA Button */}
           <Link
             href={enquireHref}
             className="inline-flex items-center gap-2 bg-[#A26D38] hover:bg-[#8d5e30] active:scale-95 text-white text-[13px] sm:text-[14px] font-medium tracking-wide px-5 sm:px-6 py-2.5 sm:py-2.8 rounded-full shadow-[0_4px_16px_rgba(162,109,56,0.22)] transition-all duration-300 group"
