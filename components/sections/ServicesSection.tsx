@@ -109,38 +109,14 @@ export default function ServicesSection({ data }: SectionProps.Services) {
                       href={linkHref}
                       className="group/img relative w-full aspect-[4/5] max-w-[150px] sm:max-w-[170px] overflow-hidden rounded-[2px] bg-[#FAF7F2] shadow-sm block"
                     >
-                      {isArch && (
-                        <div className="relative w-full h-full overflow-hidden">
-                          <Image
-                            src={item.image || "/images/about_02.png"}
-                            alt={item.title}
-                            fill
-                            className="object-cover object-[75%_55%] scale-[1.3] transition-transform duration-500 group-hover/img:scale-[1.38]"
-                          />
-                        </div>
-                      )}
-
-                      {isTable && (
-                        <div className="relative w-full h-full overflow-hidden">
-                          <Image
-                            src={item.image || "/images/about_01.png"}
-                            alt={item.title}
-                            fill
-                            className="object-cover object-[50%_50%] transition-transform duration-500 group-hover/img:scale-[1.08]"
-                          />
-                        </div>
-                      )}
-
-                      {isChandelier && (
-                        <div className="relative w-full h-full overflow-hidden">
-                          <Image
-                            src={item.image || "/images/Hero-banner.png"}
-                            alt={item.title}
-                            fill
-                            className="object-cover object-[16%_60%] scale-[1.9] transition-transform duration-500 group-hover/img:scale-[2.0]"
-                          />
-                        </div>
-                      )}
+                      <div className="relative w-full h-full overflow-hidden">
+                        <Image
+                          src={item.image || "/images/about_02.png"}
+                          alt={item.title}
+                          fill
+                          className="object-cover object-center transition-transform duration-500 group-hover/img:scale-105"
+                        />
+                      </div>
                     </Link>
                   </div>
                 </div>

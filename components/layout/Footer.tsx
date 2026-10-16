@@ -11,9 +11,9 @@ export default function Footer({ data }: SectionProps.Footer) {
   const titleMain = data.heading?.main || "Connected";
   const links = data.menu || [];
   const contact = data.contact || {
-    phone: "123-456-7890",
-    email: "info@orvique.com",
-    address: "500 Terry Francine Street,\nSan Francisco, CA 94158",
+    phone: "+1 00000 00000",
+    email: "info@xyz.com",
+    address: "500 Terry Francine Street,\nSan Francisco, CA 94158, USA",
   };
   const socials = data.socials || [];
   const copyright = data.copyright || "© 2026 Orvique. All Rights Reserved.";

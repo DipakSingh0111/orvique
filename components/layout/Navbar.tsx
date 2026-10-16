@@ -54,13 +54,13 @@ export default function Navbar({ data }: SectionProps.Header) {
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E2D8]/60 transition-all duration-300">
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 py-3 flex items-center justify-between relative">
-        {/* Brand Logo perfectly centered */}
+      <div className="w-full max-w-[1440px] mx-auto px-3.5 sm:px-8 lg:px-16 py-2 sm:py-3 flex items-center justify-between relative">
+        {/* Brand Logo */}
         <Link
           href="/"
-          className="flex items-center transition-transform duration-300 hover:scale-[1.02] focus:outline-none"
+          className="flex items-center shrink-0 transition-transform duration-300 hover:scale-[1.02] focus:outline-none"
         >
-          <div className="relative w-[150px] sm:w-[185px] lg:w-[210px] h-[48px] sm:h-[58px] flex items-center">
+          <div className="relative w-[130px] min-[400px]:w-[155px] sm:w-[200px] lg:w-[245px] h-[44px] min-[400px]:h-[50px] sm:h-[62px] lg:h-[72px] flex items-center">
             <Image
               src={logoSrc}
               alt={logoAlt}
@@ -71,41 +71,41 @@ export default function Navbar({ data }: SectionProps.Header) {
           </div>
         </Link>
 
-        <div className="flex items-center gap-4 sm:gap-6" ref={menuRef}>
+        <div className="flex items-center gap-2 min-[400px]:gap-3 sm:gap-6 shrink-0" ref={menuRef}>
           <div className="relative">
             <button
               type="button"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((prev) => !prev)}
-              className="relative flex flex-col justify-center items-center gap-[5.5px] w-10 h-10 p-2 rounded-full hover:bg-black/5 active:scale-95 group cursor-pointer transition-all duration-300"
+              className="relative flex flex-col justify-center items-center gap-[5px] w-9 h-9 sm:w-10 sm:h-10 p-1.5 sm:p-2 rounded-full hover:bg-black/5 active:scale-95 group cursor-pointer transition-all duration-300"
             >
               {/* Top bar */}
               <span
-                className={`w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 transform origin-center ${
+                className={`w-5 sm:w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 transform origin-center ${
                   isOpen
-                    ? "rotate-45 translate-y-[7.5px] bg-[#B38749]"
+                    ? "rotate-45 translate-y-[7px] bg-[#B38749]"
                     : "group-hover:bg-[#B38749]"
                 }`}
               />
               {/* Middle bar */}
               <span
-                className={`w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 ${
+                className={`w-5 sm:w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 ${
                   isOpen ? "opacity-0 scale-x-0" : "group-hover:bg-[#B38749]"
                 }`}
               />
               {/* Bottom bar */}
               <span
-                className={`w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 transform origin-center ${
+                className={`w-5 sm:w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 transform origin-center ${
                   isOpen
-                    ? "-rotate-45 -translate-y-[7.5px] bg-[#B38749]"
+                    ? "-rotate-45 -translate-y-[7px] bg-[#B38749]"
                     : "group-hover:bg-[#B38749]"
                 }`}
               />
             </button>
 
             <div
-              className={`absolute right-0 top-[calc(100%+12px)] w-[260px] sm:w-[290px] bg-white rounded-[16px] shadow-[0_16px_40px_rgba(10,34,57,0.12)] border border-[#EDE5D8] overflow-hidden transition-all duration-300 origin-top-right z-50 ${
+              className={`absolute right-[-45px] min-[400px]:right-[-35px] sm:right-0 top-[calc(100%+12px)] w-[min(calc(100vw-32px),280px)] bg-white rounded-[16px] shadow-[0_16px_40px_rgba(10,34,57,0.18)] border border-[#EDE5D8] overflow-hidden transition-all duration-300 origin-top-right z-50 ${
                 isOpen
                   ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
@@ -172,10 +172,10 @@ export default function Navbar({ data }: SectionProps.Header) {
 
           <Link
             href={enquireHref}
-            className="inline-flex items-center gap-2 bg-[#A26D38] hover:bg-[#8d5e30] active:scale-95 text-white text-[13px] sm:text-[14px] font-medium tracking-wide px-5 sm:px-6 py-2.5 sm:py-2.8 rounded-full shadow-[0_4px_16px_rgba(162,109,56,0.22)] transition-all duration-300 group"
+            className="inline-flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap bg-[#A26D38] hover:bg-[#8d5e30] active:scale-95 text-white text-[12px] sm:text-[14px] font-medium tracking-wide px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-[0_4px_16px_rgba(162,109,56,0.22)] transition-all duration-300 group shrink-0"
           >
-            <span>{enquireText}</span>
-            <span className="text-base font-light transition-transform duration-300 group-hover:translate-x-1">
+            <span className="whitespace-nowrap">{enquireText}</span>
+            <span className="text-sm sm:text-base font-light transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
           </Link>

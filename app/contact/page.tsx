@@ -40,9 +40,9 @@ export default function ContactPage() {
     badge: "CONTACT DETAILS",
     heading: { main: "Let’s Start", highlight: "Planning Together" },
     list: [
-      { type: "phone", title: "Call Us", lines: ["+91 98765 43210", "+91 98765 43211"] },
-      { type: "email", title: "Email Us", lines: ["info@orvique.com", "events@orvique.com"] },
-      { type: "address", title: "Our Address", lines: ["123 Celebration Avenue,", "Event District,", "New Delhi, 110001"] },
+      { type: "phone", title: "Call Us", lines: ["+1 00000 00000"] },
+      { type: "email", title: "Email Us", lines: ["info@xyz.com"] },
+      { type: "address", title: "Our Address", lines: ["500 Terry Francine Street,", "San Francisco, CA 94158,", "United States"] },
     ],
   };
 
@@ -235,7 +235,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 w-full h-full bg-[#E5ECF0]">
             <iframe
               title="Orvique Events Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112061.79814421251!2d77.10891544321689!3d28.631853683838385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d-122.38997782357!3d37.77085737198616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7fcf4b8b6aab%3A0xb7a188f6cf9c0a37!2sTerry%20A%20Francois%20Blvd%2C%20San%20Francisco%2C%20CA%2094158!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               className="w-full h-full border-0 filter saturate-80 opacity-90"
               loading="lazy"
             />

@@ -49,9 +49,9 @@
                 "alt": "Orvique Events & Celebrations"
               },
               "contact": {
-                "phone": "123-456-7890",
-                "email": "info@orvique.com",
-                "address": "500 Terry Francine Street,\nSan Francisco, CA 94158"
+                "phone": "+1 00000 00000",
+                "email": "info@xyz.com",
+                "address": "500 Terry Francine Street,\nSan Francisco, CA 94158, USA"
               },
               "socials": [
                 {
@@ -280,7 +280,7 @@
                   "slug": "wedding-planning",
                   "title": "Wedding\nPlanning",
                   "description": "Beautifully planned weddings for your special day.",
-                  "image": "/images/Hero-banner.png",
+                  "image": "/images/about_02.png",
                   "imageType": "arch",
                   "href": "/services/wedding-planning"
                 },
@@ -298,7 +298,7 @@
                   "slug": "social-celebrations",
                   "title": "Social\nCelebrations",
                   "description": "Memorable events for every special occasion.",
-                  "image": "/images/Hero-banner.png",
+                  "image": "/images/about_01.png",
                   "imageType": "chandelier",
                   "href": "/services/social-celebrations"
                 }
@@ -894,20 +894,20 @@
                   {
                     "type": "phone",
                     "title": "Call Us",
-                    "lines": ["+91 98765 43210", "+91 98765 43211"]
+                    "lines": ["+1 00000 00000"]
                   },
                   {
                     "type": "email",
                     "title": "Email Us",
-                    "lines": ["info@orvique.com", "events@orvique.com"]
+                    "lines": ["info@xyz.com"]
                   },
                   {
                     "type": "address",
                     "title": "Our Address",
                     "lines": [
-                      "123 Celebration Avenue,",
-                      "Event District,",
-                      "New Delhi, 110001"
+                      "500 Terry Francine Street,",
+                      "San Francisco, CA 94158,",
+                      "United States"
                     ]
                   }
                 ]
@@ -945,9 +945,9 @@
                 }
               ],
               "contact": {
-                "phone": "123-456-7890",
-                "email": "info@orvique.com",
-                "address": "500 Terry Francine Street,\nSan Francisco, CA 94158"
+                "phone": "+1 00000 00000",
+                "email": "info@xyz.com",
+                "address": "500 Terry Francine Street,\nSan Francisco, CA 94158, USA"
               },
               "socials": [
                 {
