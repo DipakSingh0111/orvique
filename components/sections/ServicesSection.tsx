@@ -2,31 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import siteData from "@/data/qrvique.json";
 import { motion } from "framer-motion";
+import type { SectionProps } from "@/types/orvique.types";
 
-interface ServicesSectionProps {
-  badge?: string;
-  description?: string;
-  headingPrimary?: string;
-  headingHighlight?: string;
-  items?: Array<{
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    imageType?: string;
-    link: string;
-  }>;
-}
+export default function ServicesSection({ data }: SectionProps.Services) {
+  if (!data) return null;
 
-export default function ServicesSection({
-  badge = siteData.services.badge,
-  description = siteData.services.description,
-  headingPrimary = siteData.services.heading.primary,
-  headingHighlight = siteData.services.heading.highlight,
-  items = siteData.services.items,
-}: ServicesSectionProps) {
+  const badge = data.badge || "OUR SERVICES";
+  const description = data.description || "";
+  const headingPrimary = data.heading?.main || "Creating Events";
+  const headingHighlight = data.heading?.highlight || "That Truly Matter";
+  const items = data.list || [];
+
   return (
     <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 pt-2 pb-10 sm:pb-14 overflow-hidden">
       <motion.div
@@ -61,6 +48,7 @@ export default function ServicesSection({
           const isArch = item.imageType === "arch";
           const isTable = item.imageType === "table";
           const isChandelier = item.imageType === "chandelier";
+          const linkHref = item.href || `/services/${item.slug}`;
 
           return (
             <motion.div
@@ -86,7 +74,7 @@ export default function ServicesSection({
                 <div className="grid grid-cols-12 gap-3 items-end">
                   <div className="col-span-6 flex flex-col justify-between min-h-[160px] sm:min-h-[180px]">
                     <div>
-                      <Link href={item.link} className="group/title block">
+                      <Link href={linkHref} className="group/title block">
                         <h3 className="font-serif-luxury text-[22px] sm:text-[24px] lg:text-[26px] font-semibold text-[#0A2239] group-hover/title:text-[#B38749] leading-[1.15] whitespace-pre-line mb-2.5 transition-colors">
                           {item.title}
                         </h3>
@@ -97,7 +85,7 @@ export default function ServicesSection({
                     </div>
                     <div className="mt-5">
                       <Link
-                        href={item.link}
+                        href={linkHref}
                         aria-label={`View ${item.title}`}
                         className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#A87948] hover:bg-[#8e6438] active:scale-95 text-white flex items-center justify-center transition-all duration-300 shadow-[0_4px_14px_rgba(168,121,72,0.3)] group"
                       >
@@ -118,7 +106,7 @@ export default function ServicesSection({
                   </div>
                   <div className="col-span-6 flex justify-end">
                     <Link
-                      href={item.link}
+                      href={linkHref}
                       className="group/img relative w-full aspect-[4/5] max-w-[150px] sm:max-w-[170px] overflow-hidden rounded-[2px] bg-[#FAF7F2] shadow-sm block"
                     >
                       {isArch && (

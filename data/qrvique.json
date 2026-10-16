@@ -1,709 +1,973 @@
 {
-  "navbar": {
-    "logoSrc": "/images/logo.png",
-    "logoAlt": "Orvique Events & Celebrations",
-    "enquireText": "Enquire Now",
-    "enquireHref": "/enquiry",
-    "menuLinks": [
-      { "name": "Home", "href": "/" },
-      { "name": "About Us", "href": "/about" },
-      { "name": "Services", "href": "/services" },
-      { "name": "Blogs", "href": "/blogs" },
-      { "name": "Testimonials", "href": "/testimonials" },
-      { "name": "Enquiry", "href": "/enquiry" },
-      { "name": "Contact Us", "href": "/contact" }
-    ]
-  },
-  "hero": {
-    "bannerSrc": "/images/Hero-banner.png",
-    "bannerAlt": "Moments Beyond Expectations - Luxury Wedding Table Setting & Coastal Arch",
-    "title": {
-      "top": "Moments",
-      "middle": "Beyond",
-      "bottom": "Expectations"
-    },
-    "cta": {
-      "text": "Explore More",
-      "href": "#explore"
-    }
-  },
-  "breadcrumbs": {
-    "about": {
-      "title": "About Us",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "About Us" }]
-    },
-    "services": {
-      "title": "Services",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Services" }]
-    },
-    "serviceDetail": {
-      "title": "Sevices Detail",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Sevices Detail" }]
-    },
-    "blog": {
-      "title": "Latest Blog",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Blog" }]
-    },
-    "blogs": {
-      "title": "Blogs",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Blogs" }]
-    },
-    "blogDetail": {
-      "title": "Blog Detail",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Blog Detail" }]
-    },
-    "contact": {
-      "title": "Contact Us",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Contact Us" }]
-    },
-    "testimonials": {
-      "title": "Testimonials",
-      "items": [{ "label": "HOME", "href": "/" }, { "label": "Testimonials" }]
-    }
-  },
-  "about": {
-    "badge": "ABOUT ORVIQUE",
-    "heading": {
-      "primary": "Moments",
-      "highlight": "Made Extraordinary"
-    },
-    "description": "We create unforgettable celebrations with thoughtful planning, elegant design and seamless execution.",
-    "features": [
-      "Personalized event planning",
-      "Elegant and creative setups",
-      "Seamless execution from start to finish"
-    ],
-    "button": {
-      "text": "EXPLORE MORE",
-      "link": "#about"
-    },
-    "images": {
-      "left": "/images/about_02.png",
-      "right": "/images/about_01.png"
-    }
-  },
-  "services": {
-    "badge": "OUR SERVICES",
-    "description": "We create unforgettable celebrations with thoughtful planning and elegant setups.",
-    "heading": {
-      "primary": "Creating Events",
-      "highlight": "That Truly Matter"
-    },
-    "items": [
-      {
-        "id": "01",
-        "slug": "wedding-planning",
-        "title": "Wedding\nPlanning",
-        "description": "Beautifully planned weddings for your special day.",
-        "image": "/images/Hero-banner.png",
-        "imageType": "arch",
-        "link": "/services/wedding-planning"
-      },
-      {
-        "id": "02",
-        "slug": "corporate-events",
-        "title": "Corporate\nEvents",
-        "description": "Professional events that inspire and connect.",
-        "image": "/images/about_01.png",
-        "imageType": "table",
-        "link": "/services/corporate-events"
-      },
-      {
-        "id": "03",
-        "slug": "social-celebrations",
-        "title": "Social\nCelebrations",
-        "description": "Memorable events for every special occasion.",
-        "image": "/images/Hero-banner.png",
-        "imageType": "chandelier",
-        "link": "/services/social-celebrations"
-      }
-    ]
-  },
-  "process": {
-    "badge": "OUR PROCESS",
-    "heading": {
-      "primary": "From Vision",
-      "highlight": "to Celebration"
-    },
-    "images": {
-      "execution": "/images/about_01.png",
-      "consultation": "/images/about_02.png",
-      "planning": "/images/about_01.png"
-    },
-    "steps": [
-      {
-        "number": "(01)",
-        "title": "Consultation",
-        "description": "We understand your vision and requirements."
-      },
-      {
-        "number": "(02)",
-        "title": "Planning",
-        "description": "We plan every detail with care and creativity."
-      },
-      {
-        "number": "(03)",
-        "title": "Execution",
-        "description": "We bring your event to life with a seamless experience."
-      }
-    ]
-  },
-  "testimonials": {
-    "badge": "OUR CLIENT FEEDBACK",
-    "heading": {
-      "primary": "What Our",
-      "highlight": "Clients Say?"
-    },
-    "featuredImage": "/images/about_01.png",
-    "items": [
-      {
-        "id": "1",
-        "feedback": "Our wedding was a dream come true. The team made everything so smooth and beautiful.",
-        "author": "Priya Sharma",
-        "role": "Bridal Client",
-        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
-      },
-      {
-        "id": "2",
-        "feedback": "Professional, creative and detail oriented. They delivered an amazing event beyond our expectations.",
-        "author": "Rahul Mehta",
-        "role": "Corporate Client",
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-      },
-      {
-        "id": "3",
-        "feedback": "Exceptional service and stunning decor. Every moment was perfectly planned and executed.",
-        "author": "Sneha Kapoor",
-        "role": "Event Client",
-        "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
-      },
-      {
-        "id": "4",
-        "feedback": "From the floral decor to lightning and banquet ambiance, our guests could not stop praising the setup.",
-        "author": "Aarav Patel",
-        "role": "Wedding Client",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
-      },
-      {
-        "id": "5",
-        "feedback": "Their expertise made our annual anniversary celebration completely stress-free and truly unforgettable.",
-        "author": "Ananya Roy",
-        "role": "Anniversary Celebration",
-        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
-      }
-    ]
-  },
-  "blog": {
-    "badge": "OUR BLOG",
-    "heading": {
-      "primary": "Latest",
-      "highlight": "Stories & Ideas"
-    },
-    "viewAllText": "VIEW ALL BLOGS",
-    "viewAllLink": "/blog",
-    "articles": [
-      {
-        "id": "1",
-        "title": "Budget-Friendly Wedding Planning Tips",
-        "date": "MAY 25, 2024",
-        "category": "WEDDING",
-        "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/budget-friendly-wedding-planning-tips"
-      },
-      {
-        "id": "2",
-        "title": "Tips for Choosing the Perfect Wedding Venue",
-        "date": "MAY 25, 2024",
-        "category": "WEDDING",
-        "image": "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/tips-for-choosing-the-perfect-wedding-venue"
-      },
-      {
-        "id": "3",
-        "title": "How Your Events Can Make an Impact",
-        "date": "MAY 25, 2024",
-        "category": "EVENTS",
-        "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/how-your-events-can-make-an-impact"
-      },
-      {
-        "id": "4",
-        "title": "Guide to Choosing Outdoor Event Decor",
-        "date": "MAY 25, 2024",
-        "category": "DECOR",
-        "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/guide-to-choosing-outdoor-event-decor"
-      },
-      {
-        "id": "5",
-        "title": "Budget-Friendly Wedding Planning Tips",
-        "date": "MAY 25, 2024",
-        "category": "WEDDING",
-        "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/budget-friendly-wedding-planning-tips-2"
-      },
-      {
-        "id": "6",
-        "title": "Tips for Choosing the Perfect Wedding Venue",
-        "date": "MAY 25, 2024",
-        "category": "WEDDING",
-        "image": "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/tips-for-choosing-the-perfect-wedding-venue-2"
-      },
-      {
-        "id": "7",
-        "title": "How Your Events Can Make an Impact",
-        "date": "MAY 25, 2024",
-        "category": "EVENTS",
-        "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/how-your-events-can-make-an-impact-2"
-      },
-      {
-        "id": "8",
-        "title": "Guide to Choosing Outdoor Event Decor",
-        "date": "MAY 25, 2024",
-        "category": "DECOR",
-        "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80",
-        "link": "/blog/guide-to-choosing-outdoor-event-decor-2"
-      }
-    ]
-  },
-  "footer": {
-    "titleScript": "Stay",
-    "titleMain": "Connected",
-    "links": [
-      { "name": "Home", "href": "/" },
-      { "name": "About", "href": "/about" },
-      { "name": "Our Services", "href": "/services" },
-      { "name": "Blog", "href": "/blog" },
-      { "name": "Contact Us", "href": "/contact" }
-    ],
-    "contact": {
-      "phone": "123-456-7890",
-      "email": "info@orvique.com",
-      "address": "500 Terry Francine Street,\nSan Francisco, CA 94158"
-    },
-    "socials": [
-      { "platform": "facebook", "url": "https://facebook.com" },
-      { "platform": "instagram", "url": "https://instagram.com" },
-      { "platform": "youtube", "url": "https://youtube.com" }
-    ],
-    "copyright": "© 2026 Orvique. All Rights Reserved."
-  },
-  "testimonialsPage": {
-    "reviews": [
-      {
-        "id": "1",
-        "rating": 5,
-        "feedback": "“The entire experience was amazing from start to finish. The team was beautiful, supportive, and every detail was handled perfectly. Our wedding day turned out exactly how we imagined it.”",
-        "author": "Priya Sharma",
-        "role": "Wedding Celebration",
-        "initial": "P"
-      },
-      {
-        "id": "2",
-        "rating": 5,
-        "feedback": "“We booked this venue for our corporate annual event and it was a fantastic experience. The arrangements, food, and overall ambiance were excellent. Highly recommended for professional events.”",
-        "author": "Rahul Mehta",
-        "role": "Corporate Event",
-        "initial": "R"
-      },
-      {
-        "id": "3",
-        "rating": 5,
-        "feedback": "“From the very first inquiry to the final event, the team was responsive, professional, and attentive. The decor and setup were stunning, and our guests couldn't stop praising the venue.”",
-        "author": "Ananya Gupta",
-        "role": "Birthday Celebration",
-        "initial": "A"
-      },
-      {
-        "id": "4",
-        "rating": 5,
-        "feedback": "“We had our engagement ceremony here and it was simply perfect. The team took care of everything and made the day so special for us. Beautiful venue, great food, and excellent service!”",
-        "author": "Karan Malhotra",
-        "role": "Engagement Event",
-        "initial": "K"
-      },
-      {
-        "id": "5",
-        "rating": 5,
-        "feedback": "“What a wonderful experience! The venue is beautiful, well-maintained, and the staff is extremely helpful. Our guests had a great time and everything went smoothly. We will definitely be coming back.”",
-        "author": "Neha Verma",
-        "role": "Family Gathering",
-        "initial": "N"
-      },
-      {
-        "id": "6",
-        "rating": 5,
-        "feedback": "“We hosted a product launch event at this venue and it exceeded our expectations. The atmosphere, arrangements, and hospitality were top-notch. Our team and clients loved it!”",
-        "author": "Vikram Sinha",
-        "role": "Product Launch",
-        "initial": "V"
-      }
-    ]
-  },
-  "enquiryPage": {
-    "badge": "PLAN YOUR SPECIAL DAY",
-    "heading": {
-      "primary": "Let’s Start",
-      "highlight": "Planning Together"
-    },
-    "description": "Share your event details with us and our team will get back to you with the best options and a customized plan.",
-    "eventTypes": [
-      "Wedding Celebration",
-      "Corporate Event",
-      "Birthday Celebration",
-      "Engagement Event",
-      "Family Gathering",
-      "Social Celebration"
-    ],
-    "buttonText": "SEND ENQUIRY",
-    "bgImage": "/images/contact-bg.jpg"
-  },
-  "contactPage": {
-    "formSection": {
-      "badge": "SEND US A MESSAGE",
-      "heading": {
-        "primary": "Enquire About",
-        "highlight": "Your Event"
-      },
-      "description": "Fill out the form below and our team will get back to you shortly.",
-      "buttonText": "SEND MESSAGE",
-      "image": "/images/about_01.png"
-    },
-    "mapSection": {
-      "badge": "OUR LOCATION",
-      "heading": {
-        "primary": "Visit Our",
-        "highlight": "Office"
-      },
-      "description": "We welcome you to meet us at our office to discuss your event in detail. Our team will be delighted to assist you.",
-      "buttonText": "GET DIRECTIONS",
-      "locationPin": "Orvique Events & Celebrations"
-    },
-    "detailsSection": {
-      "badge": "CONTACT DETAILS",
-      "heading": {
-        "primary": "Let’s Start",
-        "highlight": "Planning Together"
-      },
-      "cards": [
-        {
-          "type": "phone",
-          "title": "Call Us",
-          "lines": ["+91 98765 43210", "+91 98765 43211"]
-        },
-        {
-          "type": "email",
-          "title": "Email Us",
-          "lines": ["info@orvique.com", "events@orvique.com"]
-        },
-        {
-          "type": "address",
-          "title": "Our Address",
-          "lines": [
-            "123 Celebration Avenue,",
-            "Event District,",
-            "New Delhi, 110001"
-          ]
+  "categories": {
+    "Orvique": {
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Header": "OrviqueHeader1",
+            "Footer": "OrviqueFooter1"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                {
+                  "key": "Hero",
+                  "component": "OrviqueHeroBanner1"
+                },
+                {
+                  "key": "About",
+                  "component": "OrviqueAboutUs1"
+                },
+                {
+                  "key": "Services",
+                  "component": "OrviqueServices1"
+                },
+                {
+                  "key": "WorkingProcess",
+                  "component": "OrviqueWorkingProcess1"
+                },
+                {
+                  "key": "Testimonials",
+                  "component": "OrviqueTestimonials1"
+                },
+                {
+                  "key": "Blog",
+                  "component": "OrviqueBlogNews1"
+                }
+              ]
+            }
+          }
         }
-      ]
+      },
+      "sections": {
+        "Global": {
+          "variants": {
+            "OrviqueGlobal1": {
+              "companyName": "Orvique Events & Celebrations",
+              "logo": {
+                "src": "/images/logo.png",
+                "alt": "Orvique Events & Celebrations"
+              },
+              "contact": {
+                "phone": "123-456-7890",
+                "email": "info@orvique.com",
+                "address": "500 Terry Francine Street,\nSan Francisco, CA 94158"
+              },
+              "socials": [
+                {
+                  "name": "Facebook",
+                  "url": "https://facebook.com",
+                  "icon": "facebook"
+                },
+                {
+                  "name": "Instagram",
+                  "url": "https://instagram.com",
+                  "icon": "instagram"
+                },
+                {
+                  "name": "YouTube",
+                  "url": "https://youtube.com",
+                  "icon": "youtube"
+                }
+              ]
+            }
+          }
+        },
+        "Header": {
+          "variants": {
+            "OrviqueHeader1": {
+              "logo": {
+                "src": "/images/logo.png",
+                "alt": "Orvique Events & Celebrations"
+              },
+              "menu": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "About Us",
+                  "href": "/about"
+                },
+                {
+                  "label": "Services",
+                  "href": "/services"
+                },
+                {
+                  "label": "Blogs",
+                  "href": "/blogs"
+                },
+                {
+                  "label": "Testimonials",
+                  "href": "/testimonials"
+                },
+                {
+                  "label": "Enquiry",
+                  "href": "/enquiry"
+                },
+                {
+                  "label": "Contact Us",
+                  "href": "/contact"
+                }
+              ],
+              "cta": {
+                "label": "Enquire Now",
+                "href": "/enquiry"
+              }
+            }
+          }
+        },
+        "PageBanners": {
+          "variants": {
+            "OrviquePageBanners1": {
+              "pages": {
+                "about": {
+                  "title": "About Us",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "About Us"
+                    }
+                  ]
+                },
+                "services": {
+                  "title": "Services",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Services"
+                    }
+                  ]
+                },
+                "serviceDetail": {
+                  "title": "Sevices Detail",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Sevices Detail"
+                    }
+                  ]
+                },
+                "blog": {
+                  "title": "Latest Blog",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Blog"
+                    }
+                  ]
+                },
+                "blogs": {
+                  "title": "Blogs",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Blogs"
+                    }
+                  ]
+                },
+                "blogDetail": {
+                  "title": "Blog Detail",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Blog Detail"
+                    }
+                  ]
+                },
+                "contact": {
+                  "title": "Contact Us",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Contact Us"
+                    }
+                  ]
+                },
+                "testimonials": {
+                  "title": "Testimonials",
+                  "breadcrumb": [
+                    {
+                      "label": "HOME",
+                      "href": "/"
+                    },
+                    {
+                      "label": "Testimonials"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "HeroBanner": {
+          "variants": {
+            "OrviqueHeroBanner1": {
+              "image": {
+                "src": "/images/Hero-banner.png",
+                "alt": "Moments Beyond Expectations - Luxury Wedding Table Setting & Coastal Arch"
+              },
+              "heading": {
+                "main": "Moments",
+                "highlight": "Expectations",
+                "middle": "Beyond"
+              },
+              "cta": {
+                "label": "Explore More",
+                "href": "#explore"
+              }
+            }
+          }
+        },
+        "AboutUs": {
+          "variants": {
+            "OrviqueAboutUs1": {
+              "badge": "ABOUT ORVIQUE",
+              "heading": {
+                "main": "Moments",
+                "highlight": "Made Extraordinary"
+              },
+              "description": "We create unforgettable celebrations with thoughtful planning, elegant design and seamless execution.",
+              "list": [
+                "Personalized event planning",
+                "Elegant and creative setups",
+                "Seamless execution from start to finish"
+              ],
+              "cta": {
+                "label": "EXPLORE MORE",
+                "href": "#about"
+              },
+              "images": {
+                "left": "/images/about_02.png",
+                "right": "/images/about_01.png"
+              }
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "OrviqueServices1": {
+              "badge": "OUR SERVICES",
+              "description": "We create unforgettable celebrations with thoughtful planning and elegant setups.",
+              "heading": {
+                "main": "Creating Events",
+                "highlight": "That Truly Matter"
+              },
+              "list": [
+                {
+                  "id": "01",
+                  "slug": "wedding-planning",
+                  "title": "Wedding\nPlanning",
+                  "description": "Beautifully planned weddings for your special day.",
+                  "image": "/images/Hero-banner.png",
+                  "imageType": "arch",
+                  "href": "/services/wedding-planning"
+                },
+                {
+                  "id": "02",
+                  "slug": "corporate-events",
+                  "title": "Corporate\nEvents",
+                  "description": "Professional events that inspire and connect.",
+                  "image": "/images/about_01.png",
+                  "imageType": "table",
+                  "href": "/services/corporate-events"
+                },
+                {
+                  "id": "03",
+                  "slug": "social-celebrations",
+                  "title": "Social\nCelebrations",
+                  "description": "Memorable events for every special occasion.",
+                  "image": "/images/Hero-banner.png",
+                  "imageType": "chandelier",
+                  "href": "/services/social-celebrations"
+                }
+              ],
+              "serviceDetails": {
+                "list": [
+                  {
+                    "slug": "wedding-planning",
+                    "breadcrumb": {
+                      "title": "Sevices Detail",
+                      "items": [
+                        {
+                          "label": "HOME",
+                          "href": "/"
+                        },
+                        {
+                          "label": "Sevices Detail"
+                        }
+                      ]
+                    },
+                    "section1": {
+                      "badge": "OUR SERVICE",
+                      "heading": {
+                        "main": "Wedding",
+                        "highlight": "Planning"
+                      },
+                      "description": "From intimate ceremonies to grand celebrations, we plan every detail of your wedding with creativity, precision and care to make your special day truly unforgettable.",
+                      "cta": {
+                        "label": "ENQUIRE NOW",
+                        "href": "/enquiry"
+                      },
+                      "introRight": "We believe every love story is unique. Our wedding planning service is designed to bring your vision to life with elegant design, seamless coordination and a stress-free experience from start to finish.",
+                      "list": [
+                        {
+                          "icon": "diamond",
+                          "title": "Personalized Planning",
+                          "description": "Tailored themes to match your style and preferences."
+                        },
+                        {
+                          "icon": "calendar",
+                          "title": "Attention to Detail",
+                          "description": "From timelines to décor, we handle every detail."
+                        },
+                        {
+                          "icon": "users",
+                          "title": "Stress-Free Experience",
+                          "description": "Relax and enjoy while we take care of everything."
+                        }
+                      ]
+                    },
+                    "section2": {
+                      "image": "/images/about_01.png",
+                      "badge": "WHAT WE OFFER",
+                      "heading": {
+                        "main": "Complete Wedding",
+                        "highlight": "Planning Services"
+                      },
+                      "description": "We offer end-to-end wedding planning to make your celebration seamless, stylish, and memorable.",
+                      "checklist": [
+                        "Venue Selection",
+                        "Theme & Décor Planning",
+                        "Vendor Coordination",
+                        "Guest Management",
+                        "Event Design & Styling",
+                        "Logistics & Scheduling",
+                        "On-Site Coordination",
+                        "Budget Planning"
+                      ]
+                    },
+                    "section3": {
+                      "badge": "OUR PROCESS",
+                      "heading": {
+                        "main": "How We Plan",
+                        "highlight": "Your Perfect Wedding"
+                      },
+                      "description": "Our simple and organized process ensures a smooth journey from idea to celebration.",
+                      "image": "/images/about_02.png",
+                      "list": [
+                        {
+                          "step": "01",
+                          "title": "Consultation",
+                          "description": "We understand your vision, preferences, and requirements."
+                        },
+                        {
+                          "step": "02",
+                          "title": "Planning & Design",
+                          "description": "We create a customized plan with themes, décor, and vendors."
+                        },
+                        {
+                          "step": "03",
+                          "title": "Coordination",
+                          "description": "We manage all logistics and timelines with precision."
+                        },
+                        {
+                          "step": "04",
+                          "title": "Execution",
+                          "description": "We bring everything together for a flawless celebration."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slug": "corporate-events",
+                    "breadcrumb": {
+                      "title": "Corporate Events",
+                      "items": [
+                        {
+                          "label": "HOME",
+                          "href": "/"
+                        },
+                        {
+                          "label": "Corporate Events"
+                        }
+                      ]
+                    },
+                    "section1": {
+                      "badge": "OUR SERVICE",
+                      "heading": {
+                        "main": "Corporate",
+                        "highlight": "Events"
+                      },
+                      "description": "From annual galas and conferences to executive summits and product launches, we craft seamless corporate events that elevate your brand and impress stakeholders.",
+                      "cta": {
+                        "label": "ENQUIRE NOW",
+                        "href": "/enquiry"
+                      },
+                      "introRight": "We believe corporate gatherings should inspire and connect. Our event team handles everything with discretion, precision, and world-class hospitality.",
+                      "list": [
+                        {
+                          "icon": "diamond",
+                          "title": "Brand Alignment",
+                          "description": "Themes and stage setups aligned with your company identity."
+                        },
+                        {
+                          "icon": "calendar",
+                          "title": "Flawless Scheduling",
+                          "description": "Minute-by-minute timeline management for smooth keynote transitions."
+                        },
+                        {
+                          "icon": "users",
+                          "title": "Executive Hospitality",
+                          "description": "VIP handling and premium guest hospitality experience."
+                        }
+                      ]
+                    },
+                    "section2": {
+                      "image": "/images/about_01.png",
+                      "badge": "WHAT WE OFFER",
+                      "heading": {
+                        "main": "Complete Corporate",
+                        "highlight": "Event Solutions"
+                      },
+                      "description": "We offer turnkey corporate event production ensuring impeccable presentation, networking, and technical perfection.",
+                      "checklist": [
+                        "Venue Sourcing & Setup",
+                        "AV & Stage Production",
+                        "Keynote & Speaker Management",
+                        "Branded Collateral & Signage",
+                        "Catering & Banquet Service",
+                        "Registration & Badging",
+                        "Live Streaming Solutions",
+                        "Post-Event Analytics"
+                      ]
+                    },
+                    "section3": {
+                      "badge": "OUR PROCESS",
+                      "heading": {
+                        "main": "How We Execute",
+                        "highlight": "Corporate Excellence"
+                      },
+                      "description": "A methodical and dependable approach designed to meet the rigorous demands of enterprise events.",
+                      "image": "/images/about_02.png",
+                      "list": [
+                        {
+                          "step": "01",
+                          "title": "Objective & Scope",
+                          "description": "Aligning on goals, target audience, and key event metrics."
+                        },
+                        {
+                          "step": "02",
+                          "title": "Design & Production",
+                          "description": "Designing stages, stage lighting, and attendee journeys."
+                        },
+                        {
+                          "step": "03",
+                          "title": "Technical Rehearsals",
+                          "description": "Dry runs of AV, lighting, and speaker presentations."
+                        },
+                        {
+                          "step": "04",
+                          "title": "Flawless Delivery",
+                          "description": "On-ground execution ensuring seamless attendee satisfaction."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slug": "social-celebrations",
+                    "breadcrumb": {
+                      "title": "Social Celebrations",
+                      "items": [
+                        {
+                          "label": "HOME",
+                          "href": "/"
+                        },
+                        {
+                          "label": "Social Celebrations"
+                        }
+                      ]
+                    },
+                    "section1": {
+                      "badge": "OUR SERVICE",
+                      "heading": {
+                        "main": "Social",
+                        "highlight": "Celebrations"
+                      },
+                      "description": "From milestone anniversaries and birthday galas to festive gatherings, we create magical settings that bring family and friends together with warmth and splendor.",
+                      "cta": {
+                        "label": "ENQUIRE NOW",
+                        "href": "/enquiry"
+                      },
+                      "introRight": "Every celebration tells a heartfelt story. We take care of every decorative flourish, culinary delight, and entertainment moment so you can celebrate freely.",
+                      "list": [
+                        {
+                          "icon": "diamond",
+                          "title": "Bespoke Themes",
+                          "description": "Tailored ambient aesthetics that reflect your personal journey."
+                        },
+                        {
+                          "icon": "calendar",
+                          "title": "Thoughtful Curation",
+                          "description": "Coordinated music, lighting, and activities for all guests."
+                        },
+                        {
+                          "icon": "users",
+                          "title": "Warm Hospitality",
+                          "description": "Attentive guest care allowing hosts to fully enjoy their day."
+                        }
+                      ]
+                    },
+                    "section2": {
+                      "image": "/images/Hero-banner.png",
+                      "badge": "WHAT WE OFFER",
+                      "heading": {
+                        "main": "Unforgettable",
+                        "highlight": "Celebration Packages"
+                      },
+                      "description": "Comprehensive party and private event management designed to turn special milestones into treasured memories.",
+                      "checklist": [
+                        "Private Venue Curation",
+                        "Floral & Balloon Installations",
+                        "Live Music & Entertainment",
+                        "Gourmet Catering & Mixology",
+                        "Custom Cake & Dessert Bars",
+                        "Photography & Videography",
+                        "Invitation Management",
+                        "Favors & Personalized Gifts"
+                      ]
+                    },
+                    "section3": {
+                      "badge": "OUR PROCESS",
+                      "heading": {
+                        "main": "How We Plan",
+                        "highlight": "Your Celebration"
+                      },
+                      "description": "A delightful and collaborative process that makes party planning exciting and completely stress-free.",
+                      "image": "/images/about_01.png",
+                      "list": [
+                        {
+                          "step": "01",
+                          "title": "Theme Discovery",
+                          "description": "Brainstorming mood boards, palettes, and guest vibes."
+                        },
+                        {
+                          "step": "02",
+                          "title": "Curated Planning",
+                          "description": "Selecting venues, decor artists, and artisan culinary menus."
+                        },
+                        {
+                          "step": "03",
+                          "title": "Atmosphere Setup",
+                          "description": "Lighting, table styling, and floral placements on event morning."
+                        },
+                        {
+                          "step": "04",
+                          "title": "Celebration Night",
+                          "description": "Effortless hosting and unforgettable memories."
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "WorkingProcess": {
+          "variants": {
+            "OrviqueWorkingProcess1": {
+              "badge": "OUR PROCESS",
+              "heading": {
+                "main": "From Vision",
+                "highlight": "to Celebration"
+              },
+              "images": {
+                "execution": "/images/about_01.png",
+                "consultation": "/images/about_02.png",
+                "planning": "/images/about_01.png"
+              },
+              "list": [
+                {
+                  "number": "(01)",
+                  "title": "Consultation",
+                  "description": "We understand your vision and requirements."
+                },
+                {
+                  "number": "(02)",
+                  "title": "Planning",
+                  "description": "We plan every detail with care and creativity."
+                },
+                {
+                  "number": "(03)",
+                  "title": "Execution",
+                  "description": "We bring your event to life with a seamless experience."
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "OrviqueTestimonials1": {
+              "badge": "OUR CLIENT FEEDBACK",
+              "heading": {
+                "main": "What Our",
+                "highlight": "Clients Say?"
+              },
+              "image": "/images/about_01.png",
+              "list": [
+                {
+                  "id": "1",
+                  "quote": "Our wedding was a dream come true. The team made everything so smooth and beautiful.",
+                  "author": "Priya Sharma",
+                  "role": "Bridal Client",
+                  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                },
+                {
+                  "id": "2",
+                  "quote": "Professional, creative and detail oriented. They delivered an amazing event beyond our expectations.",
+                  "author": "Rahul Mehta",
+                  "role": "Corporate Client",
+                  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                },
+                {
+                  "id": "3",
+                  "quote": "Exceptional service and stunning decor. Every moment was perfectly planned and executed.",
+                  "author": "Sneha Kapoor",
+                  "role": "Event Client",
+                  "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                },
+                {
+                  "id": "4",
+                  "quote": "From the floral decor to lightning and banquet ambiance, our guests could not stop praising the setup.",
+                  "author": "Aarav Patel",
+                  "role": "Wedding Client",
+                  "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                },
+                {
+                  "id": "5",
+                  "quote": "Their expertise made our annual anniversary celebration completely stress-free and truly unforgettable.",
+                  "author": "Ananya Roy",
+                  "role": "Anniversary Celebration",
+                  "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                }
+              ],
+              "page": {
+                "list": [
+                  {
+                    "id": "1",
+                    "rating": 5,
+                    "quote": "“The entire experience was amazing from start to finish. The team was beautiful, supportive, and every detail was handled perfectly. Our wedding day turned out exactly how we imagined it.”",
+                    "author": "Priya Sharma",
+                    "role": "Wedding Celebration",
+                    "initial": "P"
+                  },
+                  {
+                    "id": "2",
+                    "rating": 5,
+                    "quote": "“We booked this venue for our corporate annual event and it was a fantastic experience. The arrangements, food, and overall ambiance were excellent. Highly recommended for professional events.”",
+                    "author": "Rahul Mehta",
+                    "role": "Corporate Event",
+                    "initial": "R"
+                  },
+                  {
+                    "id": "3",
+                    "rating": 5,
+                    "quote": "“From the very first inquiry to the final event, the team was responsive, professional, and attentive. The decor and setup were stunning, and our guests couldn't stop praising the venue.”",
+                    "author": "Ananya Gupta",
+                    "role": "Birthday Celebration",
+                    "initial": "A"
+                  },
+                  {
+                    "id": "4",
+                    "rating": 5,
+                    "quote": "“We had our engagement ceremony here and it was simply perfect. The team took care of everything and made the day so special for us. Beautiful venue, great food, and excellent service!”",
+                    "author": "Karan Malhotra",
+                    "role": "Engagement Event",
+                    "initial": "K"
+                  },
+                  {
+                    "id": "5",
+                    "rating": 5,
+                    "quote": "“What a wonderful experience! The venue is beautiful, well-maintained, and the staff is extremely helpful. Our guests had a great time and everything went smoothly. We will definitely be coming back.”",
+                    "author": "Neha Verma",
+                    "role": "Family Gathering",
+                    "initial": "N"
+                  },
+                  {
+                    "id": "6",
+                    "rating": 5,
+                    "quote": "“We hosted a product launch event at this venue and it exceeded our expectations. The atmosphere, arrangements, and hospitality were top-notch. Our team and clients loved it!”",
+                    "author": "Vikram Sinha",
+                    "role": "Product Launch",
+                    "initial": "V"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "BlogNews": {
+          "variants": {
+            "OrviqueBlogNews1": {
+              "badge": "OUR BLOG",
+              "heading": {
+                "main": "Latest",
+                "highlight": "Stories & Ideas"
+              },
+              "cta": {
+                "label": "VIEW ALL BLOGS",
+                "href": "/blog"
+              },
+              "list": [
+                {
+                  "id": "1",
+                  "title": "Budget-Friendly Wedding Planning Tips",
+                  "date": "MAY 25, 2024",
+                  "category": "WEDDING",
+                  "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/budget-friendly-wedding-planning-tips"
+                },
+                {
+                  "id": "2",
+                  "title": "Tips for Choosing the Perfect Wedding Venue",
+                  "date": "MAY 25, 2024",
+                  "category": "WEDDING",
+                  "image": "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/tips-for-choosing-the-perfect-wedding-venue"
+                },
+                {
+                  "id": "3",
+                  "title": "How Your Events Can Make an Impact",
+                  "date": "MAY 25, 2024",
+                  "category": "EVENTS",
+                  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/how-your-events-can-make-an-impact"
+                },
+                {
+                  "id": "4",
+                  "title": "Guide to Choosing Outdoor Event Decor",
+                  "date": "MAY 25, 2024",
+                  "category": "DECOR",
+                  "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/guide-to-choosing-outdoor-event-decor"
+                },
+                {
+                  "id": "5",
+                  "title": "Budget-Friendly Wedding Planning Tips",
+                  "date": "MAY 25, 2024",
+                  "category": "WEDDING",
+                  "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/budget-friendly-wedding-planning-tips-2"
+                },
+                {
+                  "id": "6",
+                  "title": "Tips for Choosing the Perfect Wedding Venue",
+                  "date": "MAY 25, 2024",
+                  "category": "WEDDING",
+                  "image": "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/tips-for-choosing-the-perfect-wedding-venue-2"
+                },
+                {
+                  "id": "7",
+                  "title": "How Your Events Can Make an Impact",
+                  "date": "MAY 25, 2024",
+                  "category": "EVENTS",
+                  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/how-your-events-can-make-an-impact-2"
+                },
+                {
+                  "id": "8",
+                  "title": "Guide to Choosing Outdoor Event Decor",
+                  "date": "MAY 25, 2024",
+                  "category": "DECOR",
+                  "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80",
+                  "href": "/blog/guide-to-choosing-outdoor-event-decor-2"
+                }
+              ],
+              "details": {
+                "badge": "Planning Tips",
+                "date": "14 Jul, 2025",
+                "author": "By Admin",
+                "heading": {
+                  "main": "Your Guide to",
+                  "highlight": "Stress-Free Booking"
+                },
+                "featuredImage": {
+                  "src": "/images/about_02.png",
+                  "alt": "Luxury Sunset Wedding Coastal Arch with Candles and Flowers"
+                },
+                "paragraphs": [
+                  "Planning a beautiful event doesn't have to be stressful. Whether you're organizing a wedding, a corporate event, or a private celebration, choosing the right venue and managing the details early can make the entire experience smooth and enjoyable. With the right approach, you can create a memorable event that reflects your style and leaves a lasting impression on your guests.",
+                  "Today's digital tools make the booking process easier than ever. You can compare venues, explore photos, read real reviews, and check availability with just a few clicks. A little research and early planning can help you secure the best dates, deals, and services for your special occasion.",
+                  "When booking, consider factors like location, cancellation policies, and included services such as catering, décor, lighting, and parking. Many venues offer customizable packages, allowing you to choose what fits your needs and budget. Booking early, especially during peak seasons, can also give you access to exclusive discounts and preferred dates.",
+                  "A thoughtful approach to event planning helps you avoid last-minute stress and ensures comfort throughout your celebration. With smart planning and a bit of research, you can turn any event into a truly memorable experience — whether it's an intimate gathering or a grand celebration."
+                ],
+                "checklist": [
+                  "Explore stunning venues offering breathtaking views and memorable experiences for every guest",
+                  "Reserve your venue effortlessly online and enjoy seamless booking",
+                  "Secure your event today and enjoy exclusive deals, exceptional services, and perfect locations"
+                ],
+                "quote": {
+                  "text": "A well-planned event is the beginning of beautiful memories that last a lifetime.",
+                  "author": "Event Planning Expert"
+                },
+                "closingParagraph": "Beyond personal milestones, event booking offers a unique opportunity to bring people together. From elegant weddings and lively celebrations to professional corporate events, the right venue and planning can set the tone for an unforgettable experience. By focusing on the details and choosing trusted partners, you can enjoy a seamless process and a truly remarkable event."
+              }
+            }
+          }
+        },
+        "EnquiryPage": {
+          "variants": {
+            "OrviqueEnquiryPage1": {
+              "badge": "PLAN YOUR SPECIAL DAY",
+              "heading": {
+                "main": "Let’s Start",
+                "highlight": "Planning Together"
+              },
+              "description": "Share your event details with us and our team will get back to you with the best options and a customized plan.",
+              "eventTypes": [
+                "Wedding Celebration",
+                "Corporate Event",
+                "Birthday Celebration",
+                "Engagement Event",
+                "Family Gathering",
+                "Social Celebration"
+              ],
+              "buttonText": "SEND ENQUIRY",
+              "bgImage": "/images/contact-bg.jpg"
+            }
+          }
+        },
+        "ContactPage": {
+          "variants": {
+            "OrviqueContactPage1": {
+              "formSection": {
+                "badge": "SEND US A MESSAGE",
+                "heading": {
+                  "main": "Enquire About",
+                  "highlight": "Your Event"
+                },
+                "description": "Fill out the form below and our team will get back to you shortly.",
+                "buttonText": "SEND MESSAGE",
+                "image": "/images/about_01.png"
+              },
+              "mapSection": {
+                "badge": "OUR LOCATION",
+                "heading": {
+                  "main": "Visit Our",
+                  "highlight": "Office"
+                },
+                "description": "We welcome you to meet us at our office to discuss your event in detail. Our team will be delighted to assist you.",
+                "buttonText": "GET DIRECTIONS",
+                "locationPin": "Orvique Events & Celebrations"
+              },
+              "detailsSection": {
+                "badge": "CONTACT DETAILS",
+                "heading": {
+                  "main": "Let’s Start",
+                  "highlight": "Planning Together"
+                },
+                "list": [
+                  {
+                    "type": "phone",
+                    "title": "Call Us",
+                    "lines": ["+91 98765 43210", "+91 98765 43211"]
+                  },
+                  {
+                    "type": "email",
+                    "title": "Email Us",
+                    "lines": ["info@orvique.com", "events@orvique.com"]
+                  },
+                  {
+                    "type": "address",
+                    "title": "Our Address",
+                    "lines": [
+                      "123 Celebration Avenue,",
+                      "Event District,",
+                      "New Delhi, 110001"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Footer": {
+          "variants": {
+            "OrviqueFooter1": {
+              "heading": {
+                "script": "Stay",
+                "main": "Connected"
+              },
+              "menu": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "About",
+                  "href": "/about"
+                },
+                {
+                  "label": "Our Services",
+                  "href": "/services"
+                },
+                {
+                  "label": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "label": "Contact Us",
+                  "href": "/contact"
+                }
+              ],
+              "contact": {
+                "phone": "123-456-7890",
+                "email": "info@orvique.com",
+                "address": "500 Terry Francine Street,\nSan Francisco, CA 94158"
+              },
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "https://facebook.com"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "https://instagram.com"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "https://youtube.com"
+                }
+              ],
+              "copyright": "© 2026 Orvique. All Rights Reserved."
+            }
+          }
+        }
+      }
     }
-  },
-  "serviceDetails": {
-    "wedding-planning": {
-      "breadcrumb": {
-        "title": "Sevices Detail",
-        "items": [
-          { "label": "HOME", "href": "/" },
-          { "label": "Sevices Detail" }
-        ]
-      },
-      "section1": {
-        "badge": "OUR SERVICE",
-        "heading": {
-          "primary": "Wedding",
-          "highlight": "Planning"
-        },
-        "description": "From intimate ceremonies to grand celebrations, we plan every detail of your wedding with creativity, precision and care to make your special day truly unforgettable.",
-        "cta": {
-          "text": "ENQUIRE NOW",
-          "href": "/enquiry"
-        },
-        "introRight": "We believe every love story is unique. Our wedding planning service is designed to bring your vision to life with elegant design, seamless coordination and a stress-free experience from start to finish.",
-        "features": [
-          {
-            "icon": "diamond",
-            "title": "Personalized Planning",
-            "description": "Tailored themes to match your style and preferences."
-          },
-          {
-            "icon": "calendar",
-            "title": "Attention to Detail",
-            "description": "From timelines to décor, we handle every detail."
-          },
-          {
-            "icon": "users",
-            "title": "Stress-Free Experience",
-            "description": "Relax and enjoy while we take care of everything."
-          }
-        ]
-      },
-      "section2": {
-        "image": "/images/about_01.png",
-        "badge": "WHAT WE OFFER",
-        "heading": {
-          "primary": "Complete Wedding",
-          "highlight": "Planning Services"
-        },
-        "description": "We offer end-to-end wedding planning to make your celebration seamless, stylish, and memorable.",
-        "checklist": [
-          "Venue Selection",
-          "Theme & Décor Planning",
-          "Vendor Coordination",
-          "Guest Management",
-          "Event Design & Styling",
-          "Logistics & Scheduling",
-          "On-Site Coordination",
-          "Budget Planning"
-        ]
-      },
-      "section3": {
-        "badge": "OUR PROCESS",
-        "heading": {
-          "primary": "How We Plan",
-          "highlight": "Your Perfect Wedding"
-        },
-        "description": "Our simple and organized process ensures a smooth journey from idea to celebration.",
-        "image": "/images/about_02.png",
-        "steps": [
-          {
-            "step": "01",
-            "title": "Consultation",
-            "description": "We understand your vision, preferences, and requirements."
-          },
-          {
-            "step": "02",
-            "title": "Planning & Design",
-            "description": "We create a customized plan with themes, décor, and vendors."
-          },
-          {
-            "step": "03",
-            "title": "Coordination",
-            "description": "We manage all logistics and timelines with precision."
-          },
-          {
-            "step": "04",
-            "title": "Execution",
-            "description": "We bring everything together for a flawless celebration."
-          }
-        ]
-      }
-    },
-    "corporate-events": {
-      "breadcrumb": {
-        "title": "Corporate Events",
-        "items": [
-          { "label": "HOME", "href": "/" },
-          { "label": "Corporate Events" }
-        ]
-      },
-      "section1": {
-        "badge": "OUR SERVICE",
-        "heading": {
-          "primary": "Corporate",
-          "highlight": "Events"
-        },
-        "description": "From annual galas and conferences to executive summits and product launches, we craft seamless corporate events that elevate your brand and impress stakeholders.",
-        "cta": {
-          "text": "ENQUIRE NOW",
-          "href": "/enquiry"
-        },
-        "introRight": "We believe corporate gatherings should inspire and connect. Our event team handles everything with discretion, precision, and world-class hospitality.",
-        "features": [
-          {
-            "icon": "diamond",
-            "title": "Brand Alignment",
-            "description": "Themes and stage setups aligned with your company identity."
-          },
-          {
-            "icon": "calendar",
-            "title": "Flawless Scheduling",
-            "description": "Minute-by-minute timeline management for smooth keynote transitions."
-          },
-          {
-            "icon": "users",
-            "title": "Executive Hospitality",
-            "description": "VIP handling and premium guest hospitality experience."
-          }
-        ]
-      },
-      "section2": {
-        "image": "/images/about_01.png",
-        "badge": "WHAT WE OFFER",
-        "heading": {
-          "primary": "Complete Corporate",
-          "highlight": "Event Solutions"
-        },
-        "description": "We offer turnkey corporate event production ensuring impeccable presentation, networking, and technical perfection.",
-        "checklist": [
-          "Venue Sourcing & Setup",
-          "AV & Stage Production",
-          "Keynote & Speaker Management",
-          "Branded Collateral & Signage",
-          "Catering & Banquet Service",
-          "Registration & Badging",
-          "Live Streaming Solutions",
-          "Post-Event Analytics"
-        ]
-      },
-      "section3": {
-        "badge": "OUR PROCESS",
-        "heading": {
-          "primary": "How We Execute",
-          "highlight": "Corporate Excellence"
-        },
-        "description": "A methodical and dependable approach designed to meet the rigorous demands of enterprise events.",
-        "image": "/images/about_02.png",
-        "steps": [
-          {
-            "step": "01",
-            "title": "Objective & Scope",
-            "description": "Aligning on goals, target audience, and key event metrics."
-          },
-          {
-            "step": "02",
-            "title": "Design & Production",
-            "description": "Designing stages, stage lighting, and attendee journeys."
-          },
-          {
-            "step": "03",
-            "title": "Technical Rehearsals",
-            "description": "Dry runs of AV, lighting, and speaker presentations."
-          },
-          {
-            "step": "04",
-            "title": "Flawless Delivery",
-            "description": "On-ground execution ensuring seamless attendee satisfaction."
-          }
-        ]
-      }
-    },
-    "social-celebrations": {
-      "breadcrumb": {
-        "title": "Social Celebrations",
-        "items": [
-          { "label": "HOME", "href": "/" },
-          { "label": "Social Celebrations" }
-        ]
-      },
-      "section1": {
-        "badge": "OUR SERVICE",
-        "heading": {
-          "primary": "Social",
-          "highlight": "Celebrations"
-        },
-        "description": "From milestone anniversaries and birthday galas to festive gatherings, we create magical settings that bring family and friends together with warmth and splendor.",
-        "cta": {
-          "text": "ENQUIRE NOW",
-          "href": "/enquiry"
-        },
-        "introRight": "Every celebration tells a heartfelt story. We take care of every decorative flourish, culinary delight, and entertainment moment so you can celebrate freely.",
-        "features": [
-          {
-            "icon": "diamond",
-            "title": "Bespoke Themes",
-            "description": "Tailored ambient aesthetics that reflect your personal journey."
-          },
-          {
-            "icon": "calendar",
-            "title": "Thoughtful Curation",
-            "description": "Coordinated music, lighting, and activities for all guests."
-          },
-          {
-            "icon": "users",
-            "title": "Warm Hospitality",
-            "description": "Attentive guest care allowing hosts to fully enjoy their day."
-          }
-        ]
-      },
-      "section2": {
-        "image": "/images/Hero-banner.png",
-        "badge": "WHAT WE OFFER",
-        "heading": {
-          "primary": "Unforgettable",
-          "highlight": "Celebration Packages"
-        },
-        "description": "Comprehensive party and private event management designed to turn special milestones into treasured memories.",
-        "checklist": [
-          "Private Venue Curation",
-          "Floral & Balloon Installations",
-          "Live Music & Entertainment",
-          "Gourmet Catering & Mixology",
-          "Custom Cake & Dessert Bars",
-          "Photography & Videography",
-          "Invitation Management",
-          "Favors & Personalized Gifts"
-        ]
-      },
-      "section3": {
-        "badge": "OUR PROCESS",
-        "heading": {
-          "primary": "How We Plan",
-          "highlight": "Your Celebration"
-        },
-        "description": "A delightful and collaborative process that makes party planning exciting and completely stress-free.",
-        "image": "/images/about_01.png",
-        "steps": [
-          {
-            "step": "01",
-            "title": "Theme Discovery",
-            "description": "Brainstorming mood boards, palettes, and guest vibes."
-          },
-          {
-            "step": "02",
-            "title": "Curated Planning",
-            "description": "Selecting venues, decor artists, and artisan culinary menus."
-          },
-          {
-            "step": "03",
-            "title": "Atmosphere Setup",
-            "description": "Lighting, table styling, and floral placements on event morning."
-          },
-          {
-            "step": "04",
-            "title": "Celebration Night",
-            "description": "Effortless hosting and unforgettable memories."
-          }
-        ]
-      }
-    }
-  },
-  "blogDetailPage": {
-    "badge": "Planning Tips",
-    "date": "14 Jul, 2025",
-    "author": "By Admin",
-    "heading": {
-      "primary": "Your Guide to",
-      "highlight": "Stress-Free Booking"
-    },
-    "featuredImage": "/images/about_02.png",
-    "imageAlt": "Luxury Sunset Wedding Coastal Arch with Candles and Flowers",
-    "paragraphs": [
-      "Planning a beautiful event doesn't have to be stressful. Whether you're organizing a wedding, a corporate event, or a private celebration, choosing the right venue and managing the details early can make the entire experience smooth and enjoyable. With the right approach, you can create a memorable event that reflects your style and leaves a lasting impression on your guests.",
-      "Today's digital tools make the booking process easier than ever. You can compare venues, explore photos, read real reviews, and check availability with just a few clicks. A little research and early planning can help you secure the best dates, deals, and services for your special occasion.",
-      "When booking, consider factors like location, cancellation policies, and included services such as catering, décor, lighting, and parking. Many venues offer customizable packages, allowing you to choose what fits your needs and budget. Booking early, especially during peak seasons, can also give you access to exclusive discounts and preferred dates.",
-      "A thoughtful approach to event planning helps you avoid last-minute stress and ensures comfort throughout your celebration. With smart planning and a bit of research, you can turn any event into a truly memorable experience — whether it's an intimate gathering or a grand celebration."
-    ],
-    "checklist": [
-      "Explore stunning venues offering breathtaking views and memorable experiences for every guest",
-      "Reserve your venue effortlessly online and enjoy seamless booking",
-      "Secure your event today and enjoy exclusive deals, exceptional services, and perfect locations"
-    ],
-    "quote": {
-      "text": "A well-planned event is the beginning of beautiful memories that last a lifetime.",
-      "author": "Event Planning Expert"
-    },
-    "closingParagraph": "Beyond personal milestones, event booking offers a unique opportunity to bring people together. From elegant weddings and lively celebrations to professional corporate events, the right venue and planning can set the tone for an unforgettable experience. By focusing on the details and choosing trusted partners, you can enjoy a seamless process and a truly remarkable event."
   }
 }

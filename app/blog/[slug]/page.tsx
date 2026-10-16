@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import siteData from "@/data/qrvique.json";
+import { getOrviqueSections, getOrviquePageBanner } from "@/lib/orvique";
 import { BsCalendar3, BsPerson } from "react-icons/bs";
 import { FiCheck } from "react-icons/fi";
 import { FaQuoteLeft } from "react-icons/fa";
@@ -13,31 +13,29 @@ interface BlogDetailPageProps {
 }
 
 export function generateStaticParams() {
-  return [
-    { slug: "stress-free-booking" },
-    { slug: "budget-friendly-wedding-planning-tips" },
-    { slug: "tips-for-choosing-the-perfect-wedding-venue" },
-    { slug: "how-your-events-can-make-an-impact" },
-    { slug: "guide-to-choosing-outdoor-event-decor" },
-  ];
+  const sections = getOrviqueSections();
+  const articles = sections.BlogNews?.variants?.OrviqueBlogNews1?.list || [];
+  return articles.map((article) => ({
+    slug: article.href.replace("/blog/", ""),
+  }));
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   await params;
 
-  const breadcrumb = siteData.breadcrumbs.blogDetail || {
-    title: "Blog Detail",
-    items: [{ label: "HOME", href: "/" }, { label: "Blog Detail" }],
-  };
+  const sections = getOrviqueSections();
+  const banner = getOrviquePageBanner("blogDetail");
+  const blog = sections.BlogNews?.variants?.OrviqueBlogNews1?.details;
 
-  const blog = siteData.blogDetailPage;
+  if (!blog) return null;
 
   return (
     <main className="min-h-screen bg-white text-[#0E2038] relative flex flex-col overflow-x-hidden">
       {/* 1. Standard Warm Breadcrumb Header matching reference */}
       <Breadcrumb
-        title={breadcrumb.title}
-        items={breadcrumb.items}
+        data={banner}
+        title={banner?.title || "Blog Detail"}
+        items={banner?.breadcrumb}
         className="bg-[#FAF7F2] border-b border-[#EDE5D8]/50"
       />
 
@@ -65,7 +63,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
         {/* Blog Post Title: 2 Lines matching screenshot */}
         <h1 className="font-serif-luxury text-[34px] sm:text-[44px] md:text-[50px] lg:text-[54px] font-semibold tracking-[-0.02em] leading-[1.08] text-center text-[#0A2239] mb-10 sm:mb-12 max-w-[760px]">
-          <span>{blog.heading.primary} </span>
+          <span>{blog.heading.main} </span>
           <span className="font-normal text-[#B38749]">
             {blog.heading.highlight}
           </span>
@@ -74,8 +72,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         {/* Featured Big Banner Image */}
         <div className="relative w-full aspect-[16/9] sm:aspect-[16/8.5] rounded-[10px] overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.08)] bg-[#FAF7F2] mb-10 sm:mb-12">
           <Image
-            src={blog.featuredImage || "/images/about_02.png"}
-            alt={blog.imageAlt || "Luxury Event Setup"}
+            src={blog.featuredImage?.src || "/images/about_02.png"}
+            alt={blog.featuredImage?.alt || "Luxury Event Setup"}
             fill
             priority
             className="object-cover object-[50%_35%]"
@@ -84,13 +82,13 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
         {/* Article Body Paragraphs */}
         <div className="w-full space-y-5 text-[14px] sm:text-[14.5px] text-[#556372] leading-[1.75] font-normal text-left">
-          {blog.paragraphs.map((p: string, idx: number) => (
+          {blog.paragraphs.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
 
           {/* Checklist with circular warm icons */}
           <div className="space-y-3.5 py-4">
-            {blog.checklist.map((item: string, idx: number) => (
+            {blog.checklist.map((item, idx) => (
               <div key={idx} className="flex items-start gap-3">
                 <div className="w-4 h-4 rounded-full bg-[#A87948] flex items-center justify-center shrink-0 text-white mt-1">
                   <FiCheck className="w-2.5 h-2.5 stroke-[3]" />

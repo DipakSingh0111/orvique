@@ -2,40 +2,25 @@
 
 import React from "react";
 import Link from "next/link";
-import siteData from "@/data/qrvique.json";
 import { motion } from "framer-motion";
-
-interface ArticleItem {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  image: string;
-  link: string;
-}
-
-interface BlogSectionProps {
-  badge?: string;
-  headingPrimary?: string;
-  headingHighlight?: string;
-  viewAllText?: string;
-  viewAllLink?: string;
-  articles?: ArticleItem[];
-  showButton?: boolean;
-  maxItems?: number;
-}
+import type { SectionProps } from "@/types/orvique.types";
 
 export default function BlogSection({
-  badge = siteData.blog.badge,
-  headingPrimary = siteData.blog.heading.primary,
-  headingHighlight = siteData.blog.heading.highlight,
-  viewAllText = siteData.blog.viewAllText,
-  viewAllLink = siteData.blog.viewAllLink,
-  articles = siteData.blog.articles,
+  data,
   showButton = true,
   maxItems,
-}: BlogSectionProps) {
+}: SectionProps.Blog) {
+  if (!data) return null;
+
+  const badge = data.badge || "OUR BLOG";
+  const headingPrimary = data.heading?.main || "Latest";
+  const headingHighlight = data.heading?.highlight || "Stories & Ideas";
+  const viewAllText = data.cta?.label || "VIEW ALL BLOGS";
+  const viewAllLink = data.cta?.href || "/blogs";
+  const articles = data.list || [];
+
   const displayArticles = maxItems ? articles.slice(0, maxItems) : articles;
+
   return (
     <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 pt-4 pb-12 sm:pt-6 sm:pb-16 overflow-hidden">
       {/* Top Header Row */}
@@ -98,7 +83,7 @@ export default function BlogSection({
               <div className="hidden lg:block absolute -top-6 sm:-top-7 left-0 right-0 h-[1px] bg-[#EDE5D8]" />
             )}
 
-            <Link href={article.link} className="flex items-center gap-6 sm:gap-8">
+            <Link href={article.href} className="flex items-center gap-6 sm:gap-8">
               {/* Circular Thumbnail with subtle hover scale */}
               <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden shrink-0 shadow-[0_8px_24px_rgba(0,0,0,0.08)] border-2 border-white bg-[#FAF7F2]">
                 <img

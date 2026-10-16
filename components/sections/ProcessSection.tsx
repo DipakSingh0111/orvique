@@ -1,32 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import processData from "@/data/qrvique.json";
 import { motion } from "framer-motion";
+import type { SectionProps } from "@/types/orvique.types";
 
-interface ProcessSectionProps {
-  badge?: string;
-  headingPrimary?: string;
-  headingHighlight?: string;
-  images?: {
-    execution?: string;
-    consultation?: string;
-    planning?: string;
-  };
-  steps?: Array<{
-    number: string;
-    title: string;
-    description: string;
-  }>;
-}
+export default function ProcessSection({ data }: SectionProps.WorkingProcess) {
+  if (!data) return null;
 
-export default function ProcessSection({
-  badge = processData.process.badge,
-  headingPrimary = processData.process.heading.primary,
-  headingHighlight = processData.process.heading.highlight,
-  images = processData.process.images,
-  steps = processData.process.steps,
-}: ProcessSectionProps) {
+  const badge = data.badge || "OUR PROCESS";
+  const headingPrimary = data.heading?.main || "From Vision";
+  const headingHighlight = data.heading?.highlight || "to Celebration";
+  const images = data.images;
+  const steps = data.list || [];
+
   const step1 = steps[0] || {
     number: "(01)",
     title: "Consultation",
@@ -47,7 +33,6 @@ export default function ProcessSection({
     <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 pt-2 pb-10 sm:pb-14 overflow-hidden">
       {/* 3 Columns Asymmetric Zigzag Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        
         {/* Column 1 (Left): Header + Step 03 Photo (Execution Setup) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -195,7 +180,6 @@ export default function ProcessSection({
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

@@ -1,40 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import siteData from "@/data/qrvique.json";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import type { SectionProps } from "@/types/orvique.types";
 
-interface FooterLink {
-  name: string;
-  href: string;
-}
+export default function Footer({ data }: SectionProps.Footer) {
+  if (!data) return null;
 
-interface SocialLink {
-  platform: string;
-  url: string;
-}
-
-interface FooterProps {
-  titleScript?: string;
-  titleMain?: string;
-  links?: FooterLink[];
-  contact?: {
-    phone: string;
-    email: string;
-    address: string;
+  const titleScript = data.heading?.script || "Stay";
+  const titleMain = data.heading?.main || "Connected";
+  const links = data.menu || [];
+  const contact = data.contact || {
+    phone: "123-456-7890",
+    email: "info@orvique.com",
+    address: "500 Terry Francine Street,\nSan Francisco, CA 94158",
   };
-  socials?: SocialLink[];
-  copyright?: string;
-}
+  const socials = data.socials || [];
+  const copyright = data.copyright || "© 2026 Orvique. All Rights Reserved.";
 
-export default function Footer({
-  titleScript = siteData.footer.titleScript,
-  titleMain = siteData.footer.titleMain,
-  links = siteData.footer.links,
-  contact = siteData.footer.contact,
-  socials = siteData.footer.socials,
-  copyright = siteData.footer.copyright,
-}: FooterProps) {
   return (
     <footer className="w-full bg-[#081827] text-white">
       {/* Upper Main Footer Grid */}
@@ -60,12 +43,12 @@ export default function Footer({
           <div className="md:col-span-3 lg:col-span-3 lg:border-l lg:border-r border-[#1B2F44] lg:px-12 py-2 flex flex-col justify-center">
             <ul className="space-y-3.5 sm:space-y-4">
               {links.map((link) => (
-                <li key={link.name}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-[14px] sm:text-[15px] font-light text-[#E1E7EE] hover:text-[#C29D68] transition-colors duration-200 tracking-wide"
                   >
-                    {link.name}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -112,17 +95,17 @@ export default function Footer({
             <div className="flex items-center gap-3 pt-3">
               {socials.map((social) => {
                 let IconComponent = FaFacebookF;
-                if (social.platform === "instagram")
-                  IconComponent = FaInstagram;
-                if (social.platform === "youtube") IconComponent = FaYoutube;
+                const platform = (social.platform || social.name || "").toLowerCase();
+                if (platform.includes("instagram")) IconComponent = FaInstagram;
+                if (platform.includes("youtube")) IconComponent = FaYoutube;
 
                 return (
                   <a
-                    key={social.platform}
+                    key={social.url}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={social.platform}
+                    aria-label={social.platform || social.name || "Social link"}
                     className="w-9 h-9 rounded-full border border-[#C29D68] flex items-center justify-center text-[#C29D68] hover:bg-[#C29D68] hover:text-[#081827] transition-all duration-300 hover:scale-105"
                   >
                     <IconComponent className="w-3.5 h-3.5" />

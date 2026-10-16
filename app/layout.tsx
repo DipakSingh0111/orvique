@@ -4,6 +4,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { getOrviqueSections } from "@/lib/orvique";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -27,6 +28,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const sections = getOrviqueSections();
+
   return (
     <html
       lang="en"
@@ -34,10 +37,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans bg-[#FAF7F2] text-[#0E2038]">
         <Suspense fallback={null}>
-          <Navbar />
+          <Navbar data={sections.Header?.variants?.OrviqueHeader1} />
         </Suspense>
         {children}
-        <Footer />
+        <Footer data={sections.Footer?.variants?.OrviqueFooter1} />
       </body>
     </html>
   );

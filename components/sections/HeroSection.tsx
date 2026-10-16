@@ -2,28 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import siteData from "@/data/qrvique.json";
 import { motion } from "framer-motion";
+import type { SectionProps } from "@/types/orvique.types";
 
-interface HeroSectionProps {
-  bannerSrc?: string;
-  bannerAlt?: string;
-  titleTop?: string;
-  titleMiddle?: string;
-  titleBottom?: string;
-  ctaText?: string;
-  ctaHref?: string;
-}
+export default function HeroSection({ data }: SectionProps.Hero) {
+  if (!data) return null;
 
-export default function HeroSection({
-  bannerSrc = siteData.hero.bannerSrc,
-  bannerAlt = siteData.hero.bannerAlt,
-  titleTop = siteData.hero.title.top,
-  titleMiddle = siteData.hero.title.middle,
-  titleBottom = siteData.hero.title.bottom,
-  ctaText = siteData.hero.cta.text,
-  ctaHref = siteData.hero.cta.href,
-}: HeroSectionProps) {
+  const bannerSrc = data.image?.src || "/images/Hero-banner.png";
+  const bannerAlt = data.image?.alt || "Moments Beyond Expectations";
+  const titleTop = data.heading?.main || "Moments";
+  const titleMiddle = data.heading?.middle || "Beyond";
+  const titleBottom = data.heading?.highlight || "Expectations";
+  const ctaText = data.cta?.label || "Explore More";
+  const ctaHref = data.cta?.href || "#explore";
+
   return (
     <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pt-24 sm:pt-28 lg:pt-32 pb-0">
       {/* Main Banner Visual Frame with Images and Center Typography */}

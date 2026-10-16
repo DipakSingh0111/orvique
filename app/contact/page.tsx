@@ -3,13 +3,48 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import siteData from "@/data/qrvique.json";
+import { getOrviqueSections, getOrviquePageBanner } from "@/lib/orvique";
 import { FiChevronDown, FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 export default function ContactPage() {
-  const { title, items } = siteData.breadcrumbs.contact;
-  const { formSection, mapSection, detailsSection } = siteData.contactPage;
-  const eventTypes = siteData.enquiryPage.eventTypes;
+  const sections = getOrviqueSections();
+  const banner = getOrviquePageBanner("contact");
+  const contactPage = sections.ContactPage?.variants?.OrviqueContactPage1;
+  const eventTypes =
+    sections.EnquiryPage?.variants?.OrviqueEnquiryPage1?.eventTypes || [
+      "Wedding Celebration",
+      "Corporate Event",
+      "Birthday Celebration",
+      "Engagement Event",
+      "Family Gathering",
+      "Social Celebration",
+    ];
+
+  const formSection = contactPage?.formSection || {
+    badge: "SEND US A MESSAGE",
+    heading: { main: "Enquire About", highlight: "Your Event" },
+    description: "Fill out the form below and our team will get back to you shortly.",
+    buttonText: "SEND MESSAGE",
+    image: "/images/about_01.png",
+  };
+
+  const mapSection = contactPage?.mapSection || {
+    badge: "OUR LOCATION",
+    heading: { main: "Visit Our", highlight: "Office" },
+    description: "We welcome you to meet us at our office to discuss your event in detail.",
+    buttonText: "GET DIRECTIONS",
+    locationPin: "Orvique Events & Celebrations",
+  };
+
+  const detailsSection = contactPage?.detailsSection || {
+    badge: "CONTACT DETAILS",
+    heading: { main: "Let’s Start", highlight: "Planning Together" },
+    list: [
+      { type: "phone", title: "Call Us", lines: ["+91 98765 43210", "+91 98765 43211"] },
+      { type: "email", title: "Email Us", lines: ["info@orvique.com", "events@orvique.com"] },
+      { type: "address", title: "Our Address", lines: ["123 Celebration Avenue,", "Event District,", "New Delhi, 110001"] },
+    ],
+  };
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -40,8 +75,9 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white text-[#0E2038] relative flex flex-col overflow-x-hidden">
       {/* 1. Breadcrumb Banner with warm light beige luxury background */}
       <Breadcrumb
-        title={title}
-        items={items}
+        data={banner}
+        title={banner?.title || "Contact Us"}
+        items={banner?.breadcrumb}
         className="bg-[#F8F5EE] border-b border-[#EDE5D8]/50"
       />
 
@@ -61,7 +97,7 @@ export default function ContactPage() {
 
               {/* Headline */}
               <h2 className="font-serif-luxury text-[36px] sm:text-[44px] md:text-[50px] font-semibold text-[#0A2239] tracking-[-0.015em] leading-[1.08] mb-3">
-                {formSection.heading.primary}{" "}
+                {formSection.heading.main}{" "}
                 <span className="font-serif-luxury font-normal text-[#B38749]">
                   {formSection.heading.highlight}
                 </span>
@@ -215,7 +251,7 @@ export default function ContactPage() {
             </div>
 
             <h3 className="font-serif-luxury text-[26px] sm:text-[32px] font-semibold text-[#0A2239] leading-tight mb-3">
-              {mapSection.heading.primary}{" "}
+              {mapSection.heading.main}{" "}
               <span className="font-serif-luxury font-normal text-[#B38749]">
                 {mapSection.heading.highlight}
               </span>
@@ -260,7 +296,7 @@ export default function ContactPage() {
               </div>
 
               <h2 className="font-serif-luxury text-[36px] sm:text-[46px] md:text-[52px] font-semibold text-[#0A2239] tracking-[-0.015em] leading-[1.08]">
-                {detailsSection.heading.primary}
+                {detailsSection.heading.main}
                 <span className="block font-serif-luxury font-normal text-[#B38749] mt-1">
                   {detailsSection.heading.highlight}
                 </span>
@@ -269,7 +305,7 @@ export default function ContactPage() {
 
             {/* Right Contact 3 Info Cards */}
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 items-stretch">
-              {detailsSection.cards.map((card, idx) => {
+              {detailsSection.list.map((card, idx) => {
                 let IconComponent = FiPhone;
                 if (card.type === "email") IconComponent = FiMail;
                 if (card.type === "address") IconComponent = FiMapPin;
@@ -293,7 +329,7 @@ export default function ContactPage() {
 
                     {/* Lines */}
                     <div className="flex flex-col space-y-1">
-                      {card.lines.map((line: string, lineIdx: number) => (
+                      {card.lines.map((line, lineIdx) => (
                         <p
                           key={lineIdx}
                           className="text-[12.5px] sm:text-[13px] text-[#556372] font-normal leading-snug"

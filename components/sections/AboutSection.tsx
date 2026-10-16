@@ -2,38 +2,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import aboutData from "@/data/qrvique.json";
 import { motion } from "framer-motion";
+import type { SectionProps } from "@/types/orvique.types";
 
-interface AboutSectionProps {
-  badge?: string;
-  headingPrimary?: string;
-  headingHighlight?: string;
-  description?: string;
-  features?: string[];
-  buttonText?: string;
-  buttonLink?: string;
-  showButton?: boolean;
-  leftImage?: string;
-  rightImage?: string;
-}
+export default function AboutSection({ data, showButton = true }: SectionProps.About) {
+  if (!data) return null;
 
-export default function AboutSection({
-  badge = aboutData.about.badge,
-  headingPrimary = aboutData.about.heading.primary,
-  headingHighlight = aboutData.about.heading.highlight,
-  description = aboutData.about.description,
-  features = aboutData.about.features,
-  buttonText = aboutData.about.button.text,
-  buttonLink = aboutData.about.button.link,
-  showButton = true,
-  leftImage = aboutData.about.images.right,
-  rightImage = aboutData.about.images.left,
-}: AboutSectionProps) {
+  const badge = data.badge || "ABOUT ORVIQUE";
+  const headingPrimary = data.heading?.main || "Moments";
+  const headingHighlight = data.heading?.highlight || "Made Extraordinary";
+  const description = data.description || "";
+  const features = data.list || [];
+  const buttonText = data.cta?.label || "EXPLORE MORE";
+  const buttonLink = data.cta?.href || "#about";
+  const leftImage = data.images?.right || "/images/about_01.png";
+  const rightImage = data.images?.left || "/images/about_02.png";
+
   return (
     <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 pt-2 pb-8 sm:pt-3 sm:pb-12 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        
         {/* Left Column: Overlapping Background Cards + Floral Dinner Table Image */}
         <motion.div
           initial={{ opacity: 0, x: -35 }}
@@ -67,7 +54,6 @@ export default function AboutSection({
         {/* Center-Right Column: Content & Secondary Image Layout */}
         <div className="lg:col-span-7 flex flex-col justify-center pl-0 lg:pl-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-            
             {/* Text Content Block */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -159,10 +145,8 @@ export default function AboutSection({
                 </div>
               </div>
             </motion.div>
-
           </div>
         </div>
-
       </div>
     </section>
   );

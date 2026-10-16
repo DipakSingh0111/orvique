@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import siteData from "@/data/qrvique.json";
+import { getOrviqueSections } from "@/lib/orvique";
 import { FiCheck } from "react-icons/fi";
 import { IoDiamondOutline } from "react-icons/io5";
 import { BsCalendar3, BsPeople } from "react-icons/bs";
@@ -15,20 +15,20 @@ interface ServiceDetailPageProps {
 }
 
 export function generateStaticParams() {
-  return [
-    { slug: "wedding-planning" },
-    { slug: "corporate-events" },
-    { slug: "social-celebrations" },
-  ];
+  const sections = getOrviqueSections();
+  const serviceDetails = sections.Services?.variants?.OrviqueServices1?.serviceDetails?.list || [];
+  return serviceDetails.map((service) => ({ slug: service.slug }));
 }
 
 export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   const { slug } = await params;
+  const sections = getOrviqueSections();
+  const serviceDetails = sections.Services?.variants?.OrviqueServices1?.serviceDetails?.list || [];
 
-  // Retrieve service by slug or fallback to wedding-planning
+  // Retrieve service by slug or fallback to first
   const serviceData =
-    (siteData.serviceDetails as Record<string, any>)[slug] ||
-    siteData.serviceDetails["wedding-planning"];
+    serviceDetails.find((s) => s.slug === slug) ||
+    serviceDetails[0];
 
   if (!serviceData) {
     notFound();
@@ -74,7 +74,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
             {/* Headline */}
             <h2 className="font-serif-luxury text-[44px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-semibold tracking-[-0.02em] leading-[0.98] text-[#0A2239] mb-6">
-              {section1.heading.primary}
+              {section1.heading.main}
               <span className="block font-serif-luxury font-normal text-[#B38749] mt-1 sm:mt-1.5">
                 {section1.heading.highlight}
               </span>
@@ -90,7 +90,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               href={section1.cta.href}
               className="inline-flex items-center gap-2 bg-[#A26D38] hover:bg-[#8d5e30] active:scale-95 text-white text-[12.5px] tracking-[0.16em] uppercase font-medium px-7 py-3.5 rounded-[4px] shadow-[0_4px_16px_rgba(162,109,56,0.22)] transition-all duration-300 group"
             >
-              <span>{section1.cta.text}</span>
+              <span>{section1.cta.label}</span>
               <span className="text-base font-light transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
@@ -105,7 +105,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
             {/* 3 Features */}
             <div className="space-y-6 sm:space-y-8">
-              {section1.features.map((feature: any, idx: number) => (
+              {section1.list.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-5 sm:gap-6">
                   {/* Circular Warm Icon Badge matching image */}
                   <div className="w-[60px] h-[60px] rounded-full bg-[#F7EFE5] flex items-center justify-center shrink-0 select-none">
@@ -160,7 +160,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
             {/* Headline */}
             <h2 className="font-serif-luxury text-[38px] sm:text-[48px] md:text-[54px] font-semibold tracking-[-0.02em] leading-[1.05] text-[#0A2239] mb-4">
-              {section2.heading.primary}
+              {section2.heading.main}
               <span className="block font-serif-luxury font-normal text-[#B38749] mt-1">
                 {section2.heading.highlight}
               </span>
@@ -199,11 +199,9 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               <span className="w-10 sm:w-12 h-[1.5px] bg-[#A67C4A]/80 inline-block"></span>
             </div>
 
-            {/* Headline: strictly 2 lines matching reference image
-                Line 1: primary (Deep Navy)
-                Line 2: highlight (Warm Gold) */}
+            {/* Headline */}
             <h2 className="font-serif-luxury text-[36px] sm:text-[44px] md:text-[50px] lg:text-[54px] font-semibold tracking-[-0.02em] leading-[1.08] text-[#0A2239] mb-4">
-              <span className="block">{section3.heading.primary}</span>
+              <span className="block">{section3.heading.main}</span>
               <span className="block font-normal text-[#B38749] mt-1 sm:mt-1.5 whitespace-normal sm:whitespace-nowrap">
                 {section3.heading.highlight}
               </span>
@@ -216,8 +214,8 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
             {/* Vertical Connected Numbered Timeline matching image */}
             <div className="relative flex flex-col space-y-8 pl-1">
-              {section3.steps.map((st: any, idx: number) => {
-                const isLast = idx === section3.steps.length - 1;
+              {section3.list.map((st, idx) => {
+                const isLast = idx === section3.list.length - 1;
 
                 return (
                   <div key={st.step} className="relative flex items-center gap-6 group">
@@ -251,7 +249,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             <div className="relative w-full max-w-[460px] aspect-[4/5.6] rounded-[4px] overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.1)] border-4 border-white bg-[#FAF7F2]">
               <Image
                 src={section3.image || "/images/about_02.png"}
-                alt={section3.heading.primary}
+                alt={section3.heading.main}
                 fill
                 className="object-cover object-[50%_35%]"
               />

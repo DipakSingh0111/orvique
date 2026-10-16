@@ -1,11 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
-import siteData from "@/data/qrvique.json";
+import { getOrviqueSections } from "@/lib/orvique";
 import { FiCalendar, FiChevronDown } from "react-icons/fi";
 
 export default function EnquiryPage() {
-  const { badge, heading, description, eventTypes, buttonText, bgImage } = siteData.enquiryPage;
+  const sections = getOrviqueSections();
+  const enquiry = sections.EnquiryPage?.variants?.OrviqueEnquiryPage1;
+
+  const badge = enquiry?.badge || "PLAN YOUR SPECIAL DAY";
+  const heading = enquiry?.heading || { main: "Let’s Start", highlight: "Planning Together" };
+  const description = enquiry?.description || "";
+  const eventTypes = enquiry?.eventTypes || [
+    "Wedding Celebration",
+    "Corporate Event",
+    "Birthday Celebration",
+    "Engagement Event",
+    "Family Gathering",
+    "Social Celebration",
+  ];
+  const buttonText = enquiry?.buttonText || "SEND ENQUIRY";
+  const bgImage = enquiry?.bgImage || "/images/contact-bg.jpg";
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -40,9 +55,8 @@ export default function EnquiryPage() {
     <main className="relative min-h-screen text-[#0E2038] flex flex-col justify-between overflow-x-hidden">
       {/* Background Section with Event Floral Arch Photo */}
       <div className="relative w-full min-h-[920px] lg:min-h-[1050px] flex items-center justify-center pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-28 px-4 sm:px-6">
-        
         {/* Full Image Background */}
-        <div 
+        <div
           className="absolute inset-0 w-full h-full bg-cover bg-center sm:bg-[center_top] no-repeat"
           style={{
             backgroundImage: `url('${bgImage}')`,
@@ -54,7 +68,6 @@ export default function EnquiryPage() {
 
         {/* Content Container: Top Heading + Centered Floating Form Card */}
         <div className="relative z-10 w-full max-w-[820px] mx-auto flex flex-col items-center">
-          
           {/* Top Header Block */}
           <div className="text-center mb-8 sm:mb-12 max-w-[620px]">
             {/* Badge with horizontal lines */}
@@ -68,7 +81,7 @@ export default function EnquiryPage() {
 
             {/* Headline */}
             <h1 className="font-serif-luxury text-[40px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-semibold tracking-[-0.015em] leading-[1.05] text-[#0A2239] mb-4">
-              {heading.primary}{" "}
+              {heading.main}{" "}
               <span className="font-serif-luxury font-normal text-[#B38749]">
                 {heading.highlight}
               </span>
@@ -96,7 +109,6 @@ export default function EnquiryPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5">
-                
                 {/* Row 1: Full Name & Email Address */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
@@ -197,11 +209,9 @@ export default function EnquiryPage() {
                     <span className="text-base transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </button>
                 </div>
-
               </form>
             )}
           </div>
-
         </div>
       </div>
     </main>

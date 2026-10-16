@@ -1,16 +1,22 @@
 import React from "react";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import siteData from "@/data/qrvique.json";
+import { getOrviqueSections, getOrviquePageBanner } from "@/lib/orvique";
 import { FaStar } from "react-icons/fa";
 
 export default function TestimonialsPage() {
-  const { title, items } = siteData.breadcrumbs.testimonials;
-  const reviews = siteData.testimonialsPage.reviews;
+  const sections = getOrviqueSections();
+  const banner = getOrviquePageBanner("testimonials");
+  const reviews = sections.Testimonials?.variants?.OrviqueTestimonials1?.page?.list || [];
 
   return (
     <main className="min-h-screen bg-white text-[#0E2038] relative flex flex-col overflow-x-hidden">
       {/* Breadcrumb Header with warm light beige luxury background */}
-      <Breadcrumb title={title} items={items} className="bg-[#F8F5EE] border-b border-[#EDE5D8]/50" />
+      <Breadcrumb
+        data={banner}
+        title={banner?.title || "Testimonials"}
+        items={banner?.breadcrumb}
+        className="bg-[#F8F5EE] border-b border-[#EDE5D8]/50"
+      />
 
       {/* Testimonials 2-Column Grid on Pure White Background matching reference */}
       <section className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 pt-16 sm:pt-20 pb-20 sm:pb-28 bg-white">
@@ -30,7 +36,7 @@ export default function TestimonialsPage() {
 
                   {/* 5 Filled Golden Stars */}
                   <div className="flex items-center gap-1 text-[#E08D3C]">
-                    {[...Array(review.rating)].map((_, i) => (
+                    {[...Array(review.rating || 5)].map((_, i) => (
                       <FaStar key={i} className="w-3.5 h-3.5" />
                     ))}
                   </div>
@@ -38,15 +44,15 @@ export default function TestimonialsPage() {
 
                 {/* Feedback Review Text */}
                 <p className="text-[13.5px] sm:text-[14px] text-[#556372] font-normal leading-[1.7] mb-7">
-                  {review.feedback}
+                  {review.quote || review.feedback}
                 </p>
               </div>
 
               {/* Author Row with Initial Avatar Circle */}
               <div className="flex items-center gap-4 pt-2 border-t border-[#F0E8DC]">
                 {/* Initial Badge Circle */}
-                <div className="w-11 h-11 rounded-full bg-[#F3ECE1] text-[#7A644D] font-serif font-medium text-[17px] flex items-center justify-center shrink-0 border border-[#E8DEC\-C] select-none">
-                  {review.initial}
+                <div className="w-11 h-11 rounded-full bg-[#F3ECE1] text-[#7A644D] font-serif font-medium text-[17px] flex items-center justify-center shrink-0 border border-[#E8DECC] select-none">
+                  {review.initial || review.author.charAt(0)}
                 </div>
 
                 {/* Author Name and Event Role */}
@@ -59,7 +65,6 @@ export default function TestimonialsPage() {
                   </span>
                 </div>
               </div>
-
             </div>
           ))}
         </div>

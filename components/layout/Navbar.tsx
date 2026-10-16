@@ -3,28 +3,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import siteData from "@/data/qrvique.json";
+import type { SectionProps } from "@/types/orvique.types";
 
-interface MenuLink {
-  name: string;
-  href: string;
-}
-
-interface NavbarProps {
-  logoSrc?: string;
-  logoAlt?: string;
-  enquireText?: string;
-  enquireHref?: string;
-  menuLinks?: MenuLink[];
-}
-
-export default function Navbar({
-  logoSrc = siteData.navbar.logoSrc,
-  logoAlt = siteData.navbar.logoAlt,
-  enquireText = siteData.navbar.enquireText,
-  enquireHref = siteData.navbar.enquireHref,
-  menuLinks = siteData.navbar.menuLinks,
-}: NavbarProps) {
+export default function Navbar({ data }: SectionProps.Header) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("/");
   const menuRef = useRef<HTMLDivElement>(null);
@@ -62,6 +43,14 @@ export default function Navbar({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  if (!data) return null;
+
+  const logoSrc = data.logo?.src || "/images/logo.png";
+  const logoAlt = data.logo?.alt || "Orvique Events & Celebrations";
+  const menuLinks = data.menu || [];
+  const enquireText = data.cta?.label || "Enquire Now";
+  const enquireHref = data.cta?.href || "/enquiry";
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E2D8]/60 transition-all duration-300">
@@ -140,7 +129,7 @@ export default function Navbar({
 
                   return (
                     <Link
-                      key={tab.name}
+                      key={tab.label}
                       href={tab.href}
                       onClick={() => setIsOpen(false)}
                       className={`group flex items-center justify-between px-4 py-2.5 rounded-[10px] text-[14px] font-medium transition-all duration-200 ${
@@ -157,7 +146,7 @@ export default function Navbar({
                               : "bg-transparent group-hover:bg-[#B38749]/50 scale-75 group-hover:scale-100"
                           }`}
                         />
-                        {tab.name}
+                        {tab.label}
                       </span>
                       <span
                         className={`text-sm transition-transform duration-200 ${

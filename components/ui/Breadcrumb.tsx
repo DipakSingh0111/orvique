@@ -1,22 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import type { SectionProps, BreadcrumbItem } from "@/types/orvique.types";
 
-export interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
-
-export interface BreadcrumbProps {
-  title: string;
-  items?: BreadcrumbItem[];
-  className?: string;
-}
+export type { BreadcrumbItem };
 
 export default function Breadcrumb({
-  title = "About Us",
-  items = [{ label: "HOME", href: "/" }, { label: "About Us" }],
+  data,
+  title: propTitle,
+  items: propItems,
   className = "",
-}: BreadcrumbProps) {
+}: SectionProps.Breadcrumb) {
+  const title = propTitle || data?.title || "Page";
+  const items: BreadcrumbItem[] = propItems || data?.breadcrumb || data?.items || [
+    { label: "HOME", href: "/" },
+    { label: title },
+  ];
+
   return (
     <section
       className={`relative w-full bg-[#FAF7F2] pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 flex flex-col items-center justify-center text-center px-4 overflow-hidden ${className}`}
