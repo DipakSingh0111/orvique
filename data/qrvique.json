@@ -643,35 +643,35 @@
                   "quote": "Our wedding was a dream come true. The team made everything so smooth and beautiful.",
                   "author": "Priya Sharma",
                   "role": "Bridal Client",
-                  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                  "avatar": "/images/event_01.jpg"
                 },
                 {
                   "id": "2",
                   "quote": "Professional, creative and detail oriented. They delivered an amazing event beyond our expectations.",
                   "author": "Rahul Mehta",
                   "role": "Corporate Client",
-                  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                  "avatar": "/images/event_02.jpg"
                 },
                 {
                   "id": "3",
                   "quote": "Exceptional service and stunning decor. Every moment was perfectly planned and executed.",
                   "author": "Sneha Kapoor",
                   "role": "Event Client",
-                  "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                  "avatar": "/images/event_03.jpg"
                 },
                 {
                   "id": "4",
                   "quote": "From the floral decor to lightning and banquet ambiance, our guests could not stop praising the setup.",
                   "author": "Aarav Patel",
                   "role": "Wedding Client",
-                  "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                  "avatar": "/images/event_04.jpg"
                 },
                 {
                   "id": "5",
                   "quote": "Their expertise made our annual anniversary celebration completely stress-free and truly unforgettable.",
                   "author": "Ananya Roy",
                   "role": "Anniversary Celebration",
-                  "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                  "avatar": "/images/event_05.jpg"
                 }
               ],
               "page": {
@@ -747,7 +747,7 @@
                   "title": "Budget-Friendly Wedding Planning Tips",
                   "date": "MAY 25, 2024",
                   "category": "WEDDING",
-                  "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_01.jpg",
                   "href": "/blog/budget-friendly-wedding-planning-tips"
                 },
                 {
@@ -755,7 +755,7 @@
                   "title": "Tips for Choosing the Perfect Wedding Venue",
                   "date": "MAY 25, 2024",
                   "category": "WEDDING",
-                  "image": "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_02.jpg",
                   "href": "/blog/tips-for-choosing-the-perfect-wedding-venue"
                 },
                 {
@@ -763,7 +763,7 @@
                   "title": "How Your Events Can Make an Impact",
                   "date": "MAY 25, 2024",
                   "category": "EVENTS",
-                  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_03.jpg",
                   "href": "/blog/how-your-events-can-make-an-impact"
                 },
                 {
@@ -771,7 +771,7 @@
                   "title": "Guide to Choosing Outdoor Event Decor",
                   "date": "MAY 25, 2024",
                   "category": "DECOR",
-                  "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_04.jpg",
                   "href": "/blog/guide-to-choosing-outdoor-event-decor"
                 },
                 {
@@ -779,7 +779,7 @@
                   "title": "Budget-Friendly Wedding Planning Tips",
                   "date": "MAY 25, 2024",
                   "category": "WEDDING",
-                  "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_05.jpg",
                   "href": "/blog/budget-friendly-wedding-planning-tips-2"
                 },
                 {
@@ -787,7 +787,7 @@
                   "title": "Tips for Choosing the Perfect Wedding Venue",
                   "date": "MAY 25, 2024",
                   "category": "WEDDING",
-                  "image": "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_06.jpg",
                   "href": "/blog/tips-for-choosing-the-perfect-wedding-venue-2"
                 },
                 {
@@ -795,7 +795,7 @@
                   "title": "How Your Events Can Make an Impact",
                   "date": "MAY 25, 2024",
                   "category": "EVENTS",
-                  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_01.jpg",
                   "href": "/blog/how-your-events-can-make-an-impact-2"
                 },
                 {
@@ -803,7 +803,7 @@
                   "title": "Guide to Choosing Outdoor Event Decor",
                   "date": "MAY 25, 2024",
                   "category": "DECOR",
-                  "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80",
+                  "image": "/images/event_02.jpg",
                   "href": "/blog/guide-to-choosing-outdoor-event-decor-2"
                 }
               ],

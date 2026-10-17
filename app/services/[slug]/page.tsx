@@ -20,6 +20,8 @@ export function generateStaticParams() {
   return serviceDetails.map((service) => ({ slug: service.slug }));
 }
 
+export const instant = false;
+
 export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   const { slug } = await params;
   const sections = getOrviqueSections();

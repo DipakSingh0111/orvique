@@ -20,6 +20,8 @@ export function generateStaticParams() {
   }));
 }
 
+export const instant = false;
+
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   await params;
 
