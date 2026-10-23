@@ -18,9 +18,7 @@ export default function HeroSection({ data }: SectionProps.Hero) {
 
   return (
     <section className="relative w-full max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-16 flex flex-col justify-center pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-0">
-      {/* ================= MOBILE VIEW (Clean Stacked Layout) ================= */}
       <div className="flex flex-col items-center text-center sm:hidden">
-        {/* Mobile Heading */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +44,6 @@ export default function HeroSection({ data }: SectionProps.Hero) {
           </div>
         </motion.div>
 
-        {/* Mobile Banner Image Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -65,9 +62,7 @@ export default function HeroSection({ data }: SectionProps.Hero) {
         </motion.div>
       </div>
 
-      {/* ================= TABLET & DESKTOP VIEW (Refined Overlay) ================= */}
       <div className="hidden sm:flex relative w-full aspect-[16/9.5] sm:aspect-[16/9] min-h-[500px] md:min-h-[560px] lg:min-h-[620px] max-h-[84vh] items-center justify-center overflow-hidden">
-        {/* Background Hero Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -85,7 +80,6 @@ export default function HeroSection({ data }: SectionProps.Hero) {
           />
         </motion.div>
 
-        {/* Central Overlay Typography & CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}

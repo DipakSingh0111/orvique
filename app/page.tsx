@@ -11,7 +11,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#FAF7F2] text-[#0E2038] relative flex flex-col overflow-x-hidden selection:bg-[#B38749]/20 selection:text-[#0E2038]">
-      {/* Hero Section */}
       <HeroSection data={sections.HeroBanner?.variants?.OrviqueHeroBanner1} />
       <AboutSection data={sections.AboutUs?.variants?.OrviqueAboutUs1} />
       <ServicesSection data={sections.Services?.variants?.OrviqueServices1} />

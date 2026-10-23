@@ -10,14 +10,12 @@ export default function Navbar({ data }: SectionProps.Header) {
   const [currentPath, setCurrentPath] = useState("/");
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Read current path safely on client after mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       setCurrentPath(window.location.pathname);
     }
   }, [isOpen]);
 
-  // Close dropdown on click outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -33,7 +31,6 @@ export default function Navbar({ data }: SectionProps.Header) {
     };
   }, [isOpen]);
 
-  // Close dropdown on escape key
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
@@ -55,7 +52,6 @@ export default function Navbar({ data }: SectionProps.Header) {
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E2D8]/60 transition-all duration-300">
       <div className="w-full max-w-[1440px] mx-auto px-3.5 sm:px-8 lg:px-16 py-2 sm:py-3 flex items-center justify-between relative">
-        {/* Brand Logo */}
         <Link
           href="/"
           className="flex items-center shrink-0 transition-transform duration-300 hover:scale-[1.02] focus:outline-none"
@@ -80,7 +76,6 @@ export default function Navbar({ data }: SectionProps.Header) {
               onClick={() => setIsOpen((prev) => !prev)}
               className="relative flex flex-col justify-center items-center gap-[5px] w-9 h-9 sm:w-10 sm:h-10 p-1.5 sm:p-2 rounded-full hover:bg-black/5 active:scale-95 group cursor-pointer transition-all duration-300"
             >
-              {/* Top bar */}
               <span
                 className={`w-5 sm:w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 transform origin-center ${
                   isOpen
@@ -88,13 +83,11 @@ export default function Navbar({ data }: SectionProps.Header) {
                     : "group-hover:bg-[#B38749]"
                 }`}
               />
-              {/* Middle bar */}
               <span
                 className={`w-5 sm:w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 ${
                   isOpen ? "opacity-0 scale-x-0" : "group-hover:bg-[#B38749]"
                 }`}
               />
-              {/* Bottom bar */}
               <span
                 className={`w-5 sm:w-6 h-[2px] bg-[#0E2038] rounded-full transition-all duration-300 transform origin-center ${
                   isOpen

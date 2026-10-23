@@ -266,7 +266,6 @@ export interface FooterData {
   copyright: string;
 }
 
-// SectionProps Pattern exactly matching Rydora architecture
 export interface SectionProps<T = any> {
   data?: T;
 }
@@ -285,7 +284,6 @@ export namespace SectionProps {
   export type ContactPage = { data?: ContactPageData };
 }
 
-// Backward compatibility aliases
 export type HeaderProps = SectionProps.Header;
 export type HeroProps = SectionProps.Hero;
 export type AboutProps = SectionProps.About;

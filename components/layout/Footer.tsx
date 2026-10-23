@@ -20,26 +20,20 @@ export default function Footer({ data }: SectionProps.Footer) {
 
   return (
     <footer className="w-full bg-[#081827] text-white">
-      {/* Upper Main Footer Grid */}
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-0 items-center">
-          {/* Column 1: Stay Connected Luxury Branding */}
           <div className="md:col-span-5 lg:col-span-5 flex flex-col justify-center">
             <div className="inline-block">
-              {/* Cursive / Calligraphic "Stay" */}
               <span className="block font-serif italic text-[44px] sm:text-[54px] lg:text-[60px] text-[#C29D68] leading-none mb-1 font-normal tracking-wide">
                 {titleScript}
               </span>
-              {/* Serif "Connected" */}
               <h2 className="font-serif-luxury text-[48px] sm:text-[60px] lg:text-[68px] font-medium text-white tracking-[-0.01em] leading-tight">
                 {titleMain}
               </h2>
-              {/* Golden underline accent */}
               <div className="w-20 sm:w-24 h-[1.5px] bg-[#B38749] mt-3 sm:mt-4" />
             </div>
           </div>
 
-          {/* Column 2: Navigation Links with vertical dividing borders */}
           <div className="md:col-span-3 lg:col-span-3 lg:border-l lg:border-r border-[#1B2F44] lg:px-12 py-2 flex flex-col justify-center">
             <ul className="space-y-3.5 sm:space-y-4">
               {links.map((link) => (
@@ -55,9 +49,7 @@ export default function Footer({ data }: SectionProps.Footer) {
             </ul>
           </div>
 
-          {/* Column 3: Contact Info & Social Icons */}
           <div className="md:col-span-4 lg:col-span-4 lg:pl-14 flex flex-col justify-center space-y-5">
-            {/* Phone */}
             <div className="flex items-center gap-4 group">
               <div className="w-9 h-9 rounded-full border border-[#C29D68] flex items-center justify-center text-[#C29D68] shrink-0 transition-transform duration-300 group-hover:scale-105">
                 <FiPhone className="w-4 h-4" />
@@ -70,7 +62,6 @@ export default function Footer({ data }: SectionProps.Footer) {
               </a>
             </div>
 
-            {/* Email */}
             <div className="flex items-center gap-4 group">
               <div className="w-9 h-9 rounded-full border border-[#C29D68] flex items-center justify-center text-[#C29D68] shrink-0 transition-transform duration-300 group-hover:scale-105">
                 <FiMail className="w-4 h-4" />
@@ -83,7 +74,6 @@ export default function Footer({ data }: SectionProps.Footer) {
               </a>
             </div>
 
-            {/* Address */}
             <div className="flex items-start gap-4 group">
               <div className="w-9 h-9 rounded-full border border-[#C29D68] flex items-center justify-center text-[#C29D68] shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-105">
                 <FiMapPin className="w-4 h-4" />

@@ -53,24 +53,18 @@ export default function EnquiryPage() {
 
   return (
     <main className="relative min-h-screen text-[#0E2038] flex flex-col justify-between overflow-x-hidden">
-      {/* Background Section with Event Floral Arch Photo */}
       <div className="relative w-full min-h-[920px] lg:min-h-[1050px] flex items-center justify-center pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-28 px-4 sm:px-6">
-        {/* Full Image Background */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center sm:bg-[center_top] no-repeat"
           style={{
             backgroundImage: `url('${bgImage}')`,
           }}
         >
-          {/* Subtle warm wash overlay to keep typography readable like reference */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#FAF7F2]/80 via-[#FAF7F2]/40 to-transparent pointer-events-none" />
         </div>
 
-        {/* Content Container: Top Heading + Centered Floating Form Card */}
         <div className="relative z-10 w-full max-w-[820px] mx-auto flex flex-col items-center">
-          {/* Top Header Block */}
           <div className="text-center mb-8 sm:mb-12 max-w-[620px]">
-            {/* Badge with horizontal lines */}
             <div className="flex items-center justify-center gap-3.5 mb-3">
               <span className="w-8 sm:w-10 h-[1.5px] bg-[#A67C4A]/80 inline-block"></span>
               <span className="text-[11px] sm:text-[12px] tracking-[0.25em] font-medium text-[#A67C4A] uppercase">
@@ -79,7 +73,6 @@ export default function EnquiryPage() {
               <span className="w-8 sm:w-10 h-[1.5px] bg-[#A67C4A]/80 inline-block"></span>
             </div>
 
-            {/* Headline */}
             <h1 className="font-serif-luxury text-[40px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-semibold tracking-[-0.015em] leading-[1.05] text-[#0A2239] mb-4">
               {heading.main}{" "}
               <span className="font-serif-luxury font-normal text-[#B38749]">
@@ -87,13 +80,11 @@ export default function EnquiryPage() {
               </span>
             </h1>
 
-            {/* Subtitle description */}
             <p className="text-[13.5px] sm:text-[15px] text-[#4A5568] leading-[1.65] font-normal mx-auto max-w-[500px]">
               {description}
             </p>
           </div>
 
-          {/* Floating Luxury Glassmorphism Form Card */}
           <div className="w-full max-w-[660px] bg-white/92 backdrop-blur-md rounded-[20px] p-6 sm:p-9 shadow-[0_16px_50px_rgba(0,0,0,0.12)] border border-[#EDE5D8]">
             {submitted ? (
               <div className="py-12 text-center">
@@ -109,7 +100,6 @@ export default function EnquiryPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5">
-                {/* Row 1: Full Name & Email Address */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -129,7 +119,6 @@ export default function EnquiryPage() {
                   />
                 </div>
 
-                {/* Row 2: Phone Number & Event Type */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="tel"
@@ -159,7 +148,6 @@ export default function EnquiryPage() {
                   </div>
                 </div>
 
-                {/* Row 3: Event Date */}
                 <div className="relative">
                   <input
                     type="text"
@@ -176,7 +164,6 @@ export default function EnquiryPage() {
                   <FiCalendar className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A87445] pointer-events-none" />
                 </div>
 
-                {/* Row 4: Preferred Venue / Location */}
                 <div>
                   <input
                     type="text"
@@ -187,7 +174,6 @@ export default function EnquiryPage() {
                   />
                 </div>
 
-                {/* Row 5: Your Message */}
                 <div>
                   <textarea
                     rows={4}
@@ -199,7 +185,6 @@ export default function EnquiryPage() {
                   />
                 </div>
 
-                {/* Submit Button */}
                 <div className="pt-2">
                   <button
                     type="submit"

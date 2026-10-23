@@ -20,7 +20,6 @@ export default function Breadcrumb({
     <section
       className={`relative w-full bg-[#FAF7F2] pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 flex flex-col items-center justify-center text-center px-4 overflow-hidden ${className}`}
     >
-      {/* Page Title */}
       <h1 className="font-serif-luxury text-[40px] sm:text-[48px] md:text-[56px] lg:text-[62px] font-normal text-[#1A2E44] tracking-[-0.01em] leading-tight mb-4 sm:mb-5">
         {title}
       </h1>

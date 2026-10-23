@@ -21,7 +21,6 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
   return (
     <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 pt-2 pb-8 sm:pt-3 sm:pb-12 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        {/* Left Column: Overlapping Background Cards + Floral Dinner Table Image */}
         <motion.div
           initial={{ opacity: 0, x: -35 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -30,13 +29,10 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
           className="lg:col-span-5 flex justify-center lg:justify-start"
         >
           <div className="relative w-full max-w-[480px] aspect-square">
-            {/* Top-Left Offset Decorative Warm Card */}
             <div className="absolute -top-5 -left-5 w-44 sm:w-56 h-44 sm:h-56 bg-[#EDE5D8]/65 -z-10 pointer-events-none" />
 
-            {/* Bottom-Right Offset Decorative Warm Card */}
             <div className="absolute -bottom-5 -right-5 w-40 sm:w-52 h-40 sm:h-52 bg-[#EDE5D8]/65 -z-10 pointer-events-none" />
 
-            {/* Foreground Main Image Frame */}
             <div className="relative w-full h-full shadow-[0_12px_36px_rgba(0,0,0,0.08)] bg-white p-2 sm:p-2.5">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -51,10 +47,8 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
           </div>
         </motion.div>
 
-        {/* Center-Right Column: Content & Secondary Image Layout */}
         <div className="lg:col-span-7 flex flex-col justify-center pl-0 lg:pl-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-            {/* Text Content Block */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +56,6 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="md:col-span-7 flex flex-col items-start text-left"
             >
-              {/* Badge with Line */}
               <div className="flex items-center gap-3.5 mb-4 sm:mb-5">
                 <span className="text-[12px] sm:text-[13px] tracking-[0.25em] font-medium text-[#A67C4A] uppercase">
                   {badge}
@@ -70,7 +63,6 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
                 <span className="w-10 sm:w-12 h-[1.5px] bg-[#A67C4A]/80 inline-block"></span>
               </div>
 
-              {/* Main Headline */}
               <h2 className="font-serif-luxury text-[36px] sm:text-[46px] md:text-[50px] lg:text-[54px] font-semibold tracking-[-0.015em] leading-[1.05] text-[#0A2239] mb-5">
                 {headingPrimary}
                 <span className="block font-serif-luxury font-normal text-[#B38749] mt-1">
@@ -78,12 +70,10 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
                 </span>
               </h2>
 
-              {/* Subtitle / Description Paragraph */}
               <p className="text-[13px] sm:text-[14.5px] text-[#556372] leading-[1.65] font-normal mb-6 sm:mb-8 max-w-[420px]">
                 {description}
               </p>
 
-              {/* Checkmark Feature List */}
               <div className="flex flex-col gap-3.5 mb-8 sm:mb-10 w-full">
                 {features.map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3 group">
@@ -107,7 +97,6 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
                 ))}
               </div>
 
-              {/* Explore More CTA Button */}
               {showButton && (
                 <Link
                   href={buttonLink}
@@ -119,7 +108,6 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
               )}
             </motion.div>
 
-            {/* Right Thumbnail Composition: Sunset Coastal Canopy Arch */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -128,11 +116,9 @@ export default function AboutSection({ data, showButton = true }: SectionProps.A
               className="md:col-span-5 flex justify-center md:justify-end mt-4 md:mt-0"
             >
               <div className="relative w-full max-w-[270px] sm:max-w-[300px] aspect-[4/5]">
-                {/* Background Offset Cream Tint Card */}
                 <div className="absolute -bottom-5 -right-5 w-44 sm:w-52 h-44 sm:h-52 bg-[#EDE5D8]/70 -z-10 pointer-events-none" />
                 <div className="absolute -top-4 -left-4 w-28 sm:w-36 h-28 sm:h-36 bg-[#EDE5D8]/50 -z-10 pointer-events-none" />
 
-                {/* Arch Photo Frame with white border and subtle elevation */}
                 <div className="relative w-full h-full shadow-[0_12px_32px_rgba(0,0,0,0.08)] bg-white p-2">
                   <div className="relative w-full h-full overflow-hidden bg-[#FAF7F2]">
                     <Image
